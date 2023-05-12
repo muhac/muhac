@@ -1,0 +1,77 @@
+body {
+  font-family: Frutiger, sans-serif;
+}
+
+.serif {
+  font-family: Sabon, serif;
+}
+
+.sans {
+  font-family: Frutiger, sans-serif;
+}
+
+.mono {
+  font-family: Monaco, monospace;
+}
+
+/* SCROLLBAR
+-------------------------------------------------- */
+
+html {
+  overflow-y: overlay;
+}
+
+/* 滚动条整体部分 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+
+/* 滚动条的轨道 */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /*border-left: #ddd 1px solid;*/
+}
+
+/* 滚动条的滑块按钮 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(188, 188, 188, 0.3);
+}
+
+/* 滚动条的上下两端的按钮 */
+::-webkit-scrollbar-button {
+  height: 29px;
+}
+
+/* STYLES
+-------------------------------------------------- */
+
+body > header > nav > div {
+  padding-left: 4% !important;
+  padding-right: 4% !important;
+}
+
+body > main {
+  padding-bottom: 123px;
+}
+
+body > footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+.footer-blur {
+  -webkit-backdrop-filter: saturate(150%) blur(15px) !important;
+  backdrop-filter: saturate(150%) blur(15px) !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.navbar-blur {
+  -webkit-backdrop-filter: saturate(150%) blur(15px) !important;
+  backdrop-filter: saturate(150%) blur(15px) !important;
+  background-color: rgba(2, 2, 3, 0.85) !important;
+}
+
+.link-disabled {
+  pointer-events: none;
+}
