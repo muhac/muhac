@@ -1,16 +1,16 @@
-### Hi there 👋
+<div align="center">
+  <a href="#">
+    <img width="400px" alt="Top of pokeball" src="https://muhan.li/assets/bugstop_readme/pokeball_top.png" />
+  </a>
 
-<!--
-**bugstop/bugstop** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+  <details>
+    <summary><b>OPEN PROFILE</b></summary>
+    <br />
+    <img src="https://gpvc.arturio.dev/bugstop" alt="Profile views" />
+    <p>&thinsp;</p>
+  </details>
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  <a href="#">
+    <img width="400px" alt="Bottom of pokeball" src="https://muhan.li/assets/bugstop_readme/pokeball_bottom.png" />
+  </a>
+</div>
