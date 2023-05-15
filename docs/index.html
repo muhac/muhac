@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 
-<head>
+<head id="head">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="" />
   <meta name="author" content="bugstop" />
-  <title id="index">{{ title }}</title>
+  <title>{{ title }}</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -24,6 +24,12 @@
 </head>
 
 <body class="d-flex flex-column h-100">
+  <div id="content">
+
+  <transition name="fade">
+    <section v-if="loading" class="user-select-none"><h1>Loading...</h1></section>
+  </transition>
+
   <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow navbar-blur">
@@ -35,24 +41,27 @@
 
         <div class="collapse navbar-collapse user-select-none" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item"><a class="nav-link active" href="https://muhan.li">Overview</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://linkedin.com/in/limh">LinkedIn</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://github.com/bugstop">GitHub</a></li>
+            <li class="nav-item"><a class="nav-link active" href="https://muhan.li/">Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://linkedin.com/in/limu/">LinkedIn</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://github.com/bugstop/">GitHub</a></li>
           </ul>
-          <div class="d-flex float-end user-select-none" id="lang">
-            <a class="btn btn-secondary space" v-if="zh" href="?lang=en-US" role="button">English</a>
-            <a class="btn btn-secondary space" v-if="en" href="?lang=zh-CN" role="button">简体中文</a>
+          <div class="d-flex float-end user-select-none">
+            <a class="btn btn-secondary space lang-select" v-if="zh" @click="lang_en" role="button">English</a>
+            <a class="btn btn-secondary space lang-select" v-if="en" @click="lang_zh" role="button">简体中文</a>
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main id="main">
+  <main>
     <!-- Begin page content -->
     <div class="flex-shrink-0 main-page">
       <div class="container">
-        <div class="row">
+        <div class="row upper-lg">
+          <div class="col-lg-1">
+          </div><!-- /.col-lg-1 -->
+
           <div class="col-lg-4">
             <div class="title position-sticky user-select-none">
               <div class="name">
@@ -61,12 +70,12 @@
                 <h1 class="helper helper-lg">name</h1>
               </div>
               <div>
-                <h5 class="upper upper-sm upper-en"><a class="text-decoration-none body-color" :href="'mailto:' + info.name.toLowerCase() + info.mail">{{ info.name }}{{ info.mail }}</a></h5>
+                <h5 class="upper upper-sm upper-en"><a class="text-decoration-none body-color user-select-all" :href="'mailto:' + info.name.toLowerCase() + info.mail">{{ info.name }}{{ info.mail }}</a></h5>
                 <h5 class="lower lower-sm lower-en"><span>Email</span><span class="space">Address</span></h5>
                 <h5 class="helper helper-sm">email</h5>
               </div>
               <div>
-                <h5 class="upper upper-sm upper-en"><span class="text-decoration-none body-color">Beijing, China</span></h5>
+                <h5 class="upper upper-sm upper-en"><span class="text-decoration-none body-color">{{ info.city }}, {{ info.country }}</span></h5>
                 <h5 class="lower lower-sm lower-en"><span>Location</span><span class="space">{{ info.tz }}</span></h5>
                 <h5 class="helper helper-sm">location</h5>
               </div>
@@ -74,7 +83,7 @@
             </div>
           </div><!-- /.col-lg-4 -->
 
-          <div class="col-lg-8 move-right">
+          <div class="col-lg-7 move-right">
             <div class="move-left user-select-none">
               <h2 class="upper upper-lg upper-cn"><span>工作经历</span></h2>
               <h2 class="lower lower-lg lower-en"><span>Experience</span></h2>
@@ -83,13 +92,13 @@
             <h5 v-if="en">{{ exp.baidu.name.en }}</h5>
             <h5 v-if="zh">{{ exp.baidu.name.zh }}</h5>
             <p v-if="en">
-              {{ exp.current.start.yr }}.{{ exp.current.start.mo }}&thinsp;&hyphen;&thinsp;{{ exp.current.present.en }} · {{ exp.current.lasting.en }}<br />
+              {{ current.start.yr }}.{{ current.start.mo }}&thinsp;&hyphen;&thinsp;{{ current.present.en }} · {{ current.lasting.en }}<br />
               {{ exp.baidu.position.en }}<br />
               {{ exp.baidu.skills.en }}<br />
               {{ exp.baidu.city.en }}
             </p>
             <p v-if="zh">
-              {{ exp.current.start.yr }}.{{ exp.current.start.mo }}&thinsp;&hyphen;&thinsp;{{ exp.current.present.zh }} · {{ exp.current.lasting.zh }}<br />
+              {{ current.start.yr }}.{{ current.start.mo }}&thinsp;&hyphen;&thinsp;{{ current.present.zh }} · {{ current.lasting.zh }}<br />
               {{ exp.baidu.position.zh }}<br />
               {{ exp.baidu.skills.zh }}<br />
               {{ exp.baidu.city.zh }}
@@ -103,20 +112,20 @@
             <h5 v-if="en">{{ edu.hitsz.name.en }}</h5>
             <h5 v-if="zh">{{ edu.hitsz.name.zh }}</h5>
             <p v-if="en">
-              2017.8&thinsp;&hyphen;&thinsp;2021.6 · {{ edu.hitsz.grade.en }}<br />
+              {{ edu.hitsz.start.yr }}.{{ edu.hitsz.start.mo }}&thinsp;&hyphen;&thinsp;{{ edu.hitsz.leave.yr }}.{{ edu.hitsz.leave.mo }} · {{ edu.hitsz.grade.en }}<br />
               {{ edu.hitsz.major.en }}<br />
               {{ edu.hitsz.city.en }}
             </p>
             <p v-if="zh">
-              2017.8&thinsp;&hyphen;&thinsp;2021.6 · {{ edu.hitsz.grade.zh }}<br />
+              {{ edu.hitsz.start.yr }}.{{ edu.hitsz.start.mo }}&thinsp;&hyphen;&thinsp;{{ edu.hitsz.leave.yr }}.{{ edu.hitsz.leave.mo }} · {{ edu.hitsz.grade.zh }}<br />
               {{ edu.hitsz.major.zh }}<br />
               {{ edu.hitsz.city.zh }}
             </p>
-          </div><!-- /.col-lg-8 -->
+          </div><!-- /.col-lg-7 -->
         </div><!-- /.row -->
 
         <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget subtitle-gap" data-url="https://calendly.com/limuhan/hi?primary_color=212529" style="min-width:320px;height:750px;"></div>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/limuhan/hi?primary_color=212529" style="min-width:320px;height:760px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         <!-- Calendly inline widget end -->
 
@@ -153,24 +162,23 @@
             </p>
           </div>
           <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://placebear.com/g/500/500">
+              <title>Placebear</title>
               <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
+              <text x="50%" y="50%" fill="#aaa" dy=".3em">Placebear</text>
+            </img>
           </div>
         </div>
         <!-- /END THE FEATURETTES -->
 
       </div><!-- /.container -->
     </div>
-    </div>
   </main>
 
   <footer class="footer fixed-bottom mt-auto py-3 bg-light footer-blur">
     <div class="container user-select-none">
-      <span class="text-muted" id="footer">
-        <span class="text-nowrap">Copyright &copy; 2021&thinsp;&hyphen;&thinsp;{{ year }} bugstop.</span>
+      <span class="text-muted">
+        <span class="text-nowrap">Copyright &copy; 2021&thinsp;&hyphen;&thinsp;{{ current.leave.yr }} bugstop.</span>
         <span class="text-nowrap">All rights reserved.</span>
       </span>
       <span class="float-end d-none d-md-block">
@@ -178,6 +186,7 @@
       </span>
     </div>
   </footer>
+  </div>
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>

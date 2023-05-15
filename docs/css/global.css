@@ -47,16 +47,16 @@ html {
 /* STYLES
 -------------------------------------------------- */
 
-body > header > nav > div {
+#content > header > nav > div {
   padding-left: 4% !important;
   padding-right: 4% !important;
 }
 
-body > main {
+#content > main {
   padding-bottom: 123px;
 }
 
-body > footer {
+#content > footer {
   border-top: 1px solid rgba(0, 0, 0, 0.123);
 }
 

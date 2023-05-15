@@ -1,53 +1,34 @@
 var app = new Vue({
-  el: "#index",
+  el: "#head",
   data: {
-    title: "Muhan Li · Software Engineer",
+    title: "Muhan Li \u2005\u2502\u2005 Software Engineer",
   },
 });
 
-var language = new Vue({
-  el: "#lang",
+var content = new Vue({
+  el: "#content",
   data: {
-    en: true,
-    zh: false,
-  },
-
-  created() {
-    let urlParams = new URLSearchParams(window.location.search);
-    let ok = urlParams.has("lang");
-    let zh = urlParams.get("lang") == "zh-CN";
-    if (ok && zh) {
-      this.en = false;
-      this.zh = true;
-    }
-  },
-});
-
-var copyright = new Vue({
-  el: "#footer",
-  data: {
-    year: 2021,
-  },
-
-  created() {
-    const d = new Date();
-    this.year = d.getFullYear();
-  },
-});
-
-var experiences = new Vue({
-  el: "#main",
-  data: {
+    loading: true,
     en: true,
     zh: false,
     info: {
       name: "Li,Muhan".replace(/,M/, "m"),
       mail: "\u0040msn\u002ecom",
+      city: "Beijing",
+      country: "China",
       tz: "UTC+8",
       update: "May 12, 2023",
     },
     edu: {
       hitsz: {
+        start: {
+          yr: 2017,
+          mo: 8,
+        },
+        leave: {
+          yr: 2021,
+          mo: 6,
+        },
         name: {
           en: "Harbin Institute of Technology, Shenzhen",
           zh: "哈尔滨工业大学（深圳）",
@@ -68,6 +49,14 @@ var experiences = new Vue({
     },
     exp: {
       baidu: {
+        start: {
+          yr: 2021,
+          mo: 8,
+        },
+        leave: {
+          yr: 2023,
+          mo: 8,
+        },
         name: {
           en: "Baidu",
           zh: "百度",
@@ -78,26 +67,30 @@ var experiences = new Vue({
         },
         skills: {
           en: "Backend Developer · Golang",
-          zh: "后端研发 · Go",
+          zh: "后端研发 · 主力语言 Go",
         },
         city: {
           en: "Beijing · China",
           zh: "中国 · 北京",
         },
       },
-      current: {
-        start: {
-          yr: 2021,
-          mo: 8,
-        },
-        present: {
-          en: "Present",
-          zh: "至今",
-        },
-        lasting: {
-          en: "Recently",
-          zh: "最近",
-        },
+    },
+    current: {
+      start: {
+        yr: 2021,
+        mo: 8,
+      },
+      leave: {
+        yr: 2023,
+        mo: 8,
+      },
+      present: {
+        en: "Present",
+        zh: "至今",
+      },
+      lasting: {
+        en: "Recently",
+        zh: "最近",
       },
     },
   },
@@ -105,18 +98,19 @@ var experiences = new Vue({
   created() {
     let urlParams = new URLSearchParams(window.location.search);
     let ok = urlParams.has("lang");
-    let zh = urlParams.get("lang").startsWith("zh");
-    if (ok && zh) {
-      this.en = false;
-      this.zh = true;
-    }
+    let zh = ok && urlParams.get("lang").startsWith("zh");
+    this.en = !zh;
+    this.zh = zh;
 
     const d = new Date();
     let yr = d.getFullYear();
     let mo = d.getMonth() + 1;
     let da = d.getDate();
 
-    let start = this.exp.current.start;
+    this.current.leave.yr = yr;
+    this.current.leave.mo = mo;
+
+    let start = this.current.start;
     let m = 12 * (yr - start.yr) + (mo - start.mo);
     if (da > 15) {
       m += 1;
@@ -149,8 +143,26 @@ var experiences = new Vue({
     }
 
     if (years > 0 || months > 0) {
-      this.exp.current.lasting.en = english;
-      this.exp.current.lasting.zh = chinese;
+      this.current.lasting.en = english;
+      this.current.lasting.zh = chinese;
     }
+  },
+
+  mounted() {
+    that = this;
+    setTimeout(function () {
+      that.loading = false;
+    }, 100);
+  },
+
+  methods: {
+    lang_en(event) {
+      this.en = true;
+      this.zh = false;
+    },
+    lang_zh(event) {
+      this.en = false;
+      this.zh = true;
+    },
   },
 });
