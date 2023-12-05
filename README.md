@@ -6,7 +6,7 @@
   <details>
     <summary><b>OPEN PROFILE</b></summary>
     <br />
-    <img src="https://gpvc.arturio.dev/muhac" alt="Profile views" />
+    Hello World
     <p>&thinsp;</p>
   </details>
 

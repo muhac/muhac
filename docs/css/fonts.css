@@ -3,22 +3,22 @@
 
 @font-face {
   font-family: Sabon;
-  src: url("/assets/muhac_docs/SabonRegular.otf");
+  src: url("/assets/muhac_docs/font/SabonRegular.otf");
 }
 
 @font-face {
   font-family: Frutiger;
-  src: url("/assets/muhac_docs/FrutigerRegular.ttf");
+  src: url("/assets/muhac_docs/font/FrutigerRegular.ttf");
 }
 
 @font-face {
   font-family: Monaco;
-  src: url("/assets/muhac_docs/Monaco.ttf");
+  src: url("/assets/muhac_docs/font/Monaco.ttf");
 }
 
 @font-face {
   font-family: FrutigerBold;
-  src: url("/assets/muhac_docs/FrutigerMedium.ttf");
+  src: url("/assets/muhac_docs/font/FrutigerMedium.ttf");
 }
 
 @font-face {

@@ -26,6 +26,10 @@ body {
   color: #5a5a5a;
 }
 
+.body-color {
+    color: #5a5a5a;
+}
+
 section > h1 {
   font-family: "Times New Roman", Times, "Courier New", Courier, serif;
   height: calc(100vh - 50px);
@@ -111,7 +115,11 @@ section {
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 5rem 0; /* space out the bootstrap <hr> more */
+}
+
+.featurette-divider-min {
+  margin: 1rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -280,6 +288,10 @@ section {
 
 .body-color {
   color: #5a5a5a !important;
+}
+
+.gray-scale {
+  filter: grayscale(100%);
 }
 
 @media (max-width: 719px) {

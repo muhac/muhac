@@ -1,7 +1,7 @@
 var app = new Vue({
   el: "#head",
   data: {
-    title: "Muhan Li \u2005\u2502\u2005 Software Engineer",
+    title: "Muhan Li \u2005\u2502\u2005 About me",
   },
 });
 
@@ -14,10 +14,9 @@ var content = new Vue({
     info: {
       name: "Li,Muhan".replace(/,M/, "m"),
       mail: "\u0040msn\u002ecom",
-      city: "Beijing",
-      country: "China",
+      city: "Singapore",
       tz: "UTC+8",
-      update: "May 12, 2023",
+      update: "August 18, 2023",
     },
     edu: {
       hitsz: {
@@ -30,8 +29,12 @@ var content = new Vue({
           mo: 6,
         },
         name: {
-          en: "Harbin Institute of Technology, Shenzhen",
-          zh: "哈尔滨工业大学（深圳）",
+          en: "Harbin Institute of Technology",
+          zh: "哈尔滨工业大学",
+        },
+        url: {
+          en: "http://en.hitsz.edu.cn/",
+          zh: "https://www.hitsz.edu.cn/index.html",
         },
         grade: {
           en: "Grade: 88%",
@@ -41,9 +44,47 @@ var content = new Vue({
           en: "Bachelor of Engineering · Communication Engineering",
           zh: "工学学士 · 通信工程专业",
         },
+        school: {
+          en: "School of Electronics and Information Engineering",
+          zh: "电子与信息工程学院",
+        },
         city: {
-          en: "Shenzhen · Guangdong · China",
-          zh: "中国 · 广东 · 深圳",
+          en: "Shenzhen · China",
+          zh: "中国 · 深圳",
+        },
+      },
+      ntu: {
+        start: {
+          yr: 2023,
+          mo: 8,
+        },
+        leave: {
+          yr: 2024,
+          mo: 7,
+        },
+        name: {
+          en: "Nanyang Technological University",
+          zh: "南洋理工大学",
+        },
+        url: {
+          en: "https://www.ntu.edu.sg/index",
+          zh: "https://www.ntu.edu.sg/main/cn",
+        },
+        grade: {
+          en: "TBA",
+          zh: "TBA",
+        },
+        major: {
+          en: "Master of Science · Artificial Intelligence",
+          zh: "理学硕士 · 人工智能专业",
+        },
+        school: {
+          en: "School of Computer Science and Engineering",
+          zh: "计算机科学与工程学院",
+        },
+        city: {
+          en: "Singapore",
+          zh: "新加坡",
         },
       },
     },
@@ -57,17 +98,25 @@ var content = new Vue({
           yr: 2023,
           mo: 8,
         },
+        lasting: {
+          en: "2 years",
+          zh: "2 年",
+        },
         name: {
           en: "Baidu",
           zh: "百度",
         },
+        url: {
+          en: "https://ir.baidu.com/",
+          zh: "https://home.baidu.com/",
+        },
         position: {
-          en: "Software Engineer · Baidu App",
-          zh: "软件工程师 · 移动生态事业群",
+          en: "Software Engineer · Search Tech Platform R&D Dept",
+          zh: "软件工程师 · 搜索技术平台研发部 · MEG",
         },
         skills: {
-          en: "Backend Developer · Golang",
-          zh: "后端研发 · 主力语言 Go",
+          en: "Baidu App Backend Developer · Golang",
+          zh: "手机百度后端研发 · 主力语言 Go",
         },
         city: {
           en: "Beijing · China",
@@ -77,12 +126,12 @@ var content = new Vue({
     },
     current: {
       start: {
-        yr: 2021,
+        yr: 2023,
         mo: 8,
       },
       leave: {
-        yr: 2023,
-        mo: 8,
+        yr: 2024,
+        mo: 7,
       },
       present: {
         en: "Present",
@@ -113,7 +162,7 @@ var content = new Vue({
     let start = this.current.start;
     let m = 12 * (yr - start.yr) + (mo - start.mo);
     if (da > 15) {
-      m += 1;
+      // m += 1;
     }
 
     let years = parseInt(m / 12);
