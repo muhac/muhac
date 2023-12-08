@@ -1,42 +1,34 @@
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
 /* GLOBAL STYLES
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+
+:root {
+  --fg-color: #495057;
+  --bg-color: #FFFFFF;
+  --footer-height: 3.6rem;
+  --footer-border: 1px solid rgba(0, 0, 0, 0.123);
+}
 
 body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
+  color: var(--fg-color);
+  background: var(--bg-color);
+  min-width: 300px;
 }
 
-.body-color {
-    color: #5a5a5a;
+footer {
+  border-top: var(--footer-border);
+  min-height: var(--footer-height);
 }
 
-section > h1 {
-  font-family: "Times New Roman", Times, "Courier New", Courier, serif;
-  height: calc(100vh - 50px);
-  line-height: 100vh;
+.footer-blur {
+  -webkit-backdrop-filter: saturate(150%) blur(1rem) !important;
+  backdrop-filter: saturate(150%) blur(1rem) !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
-section {
+/* LOADING MASK
+-------------------------------------------------- */
+
+aside {
   z-index: 100000;
   opacity: 1;
   position: fixed;
@@ -47,6 +39,12 @@ section {
   left: 0;
   text-align: center;
   background-color: #f8f9fa;
+}
+
+aside h1 {
+  font-family: "Times New Roman", "Courier New", serif;
+  height: calc(100vh - 50px);
+  line-height: 100vh;
 }
 
 .fade-leave-active,
@@ -63,278 +61,235 @@ section {
   opacity: 1;
 }
 
-/* CUSTOMIZE THE CAROUSEL
+/* SCROLLBAR
 -------------------------------------------------- */
 
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
+:root {
+  --scrollbar-width: .5rem;
 }
 
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
+html {
+  overflow-y: overlay;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
+/* Scrollbar overall */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: 0;
 }
 
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 32rem;
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  border-radius: calc(var(--scrollbar-width) / 2);
+  background-color: rgba(188, 188, 188, 0.3);
 }
 
-.marketing h2 {
-  font-weight: 400;
+/* Hide top button of the scrollbar */
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 0;
+  display: none;
 }
 
-/* rtl:begin:ignore */
-.marketing .col-lg-4 p {
-  margin-right: 0.75rem;
-  margin-left: 0.75rem;
-}
-
-/* rtl:end:ignore */
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 5rem 0; /* space out the bootstrap <hr> more */
-}
-
-.featurette-divider-min {
-  margin: 1rem 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  /* rtl:remove */
-  letter-spacing: -0.05rem;
-}
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 40em) {
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
-}
-
-@media (max-width: 576px) {
-  body {
-    min-width: 300px;
-  }
-
-  body > main {
-    padding-bottom: 100px;
-  }
-
-  .main-page {
-    padding-top: 40px;
-  }
-}
-
-@media (min-width: 576px) {
-  .main-page {
-    padding-top: 70px;
-  }
-}
-
-@media (min-width: 992px) {
-  .main-page {
-    padding-top: 140px;
-  }
-
-  .title {
-    padding-left: 30px;
-    top: 205px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .title {
-    margin-right: 70px;
-    border-right: #e0e0e0 2px solid;
-  }
+/* Bottom button of the scrollbar */
+::-webkit-scrollbar-button:end:increment,
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: var(--footer-height);
+  border-top: var(--footer-border);
 }
 
 /* Page Styles
 ------------------------- */
 
-.title {
-  padding-top: 8px;
-  padding-bottom: 10px;
-  margin-bottom: 6%;
-}
-
-.upper {
-  position: absolute;
-  z-index: 600;
-}
-
-.upper-lg {
-  padding-bottom: 14px;
-}
-
-.upper-sm {
-  padding-bottom: 10px;
-}
-
-.lower {
-  position: absolute;
-  z-index: 500;
-  color: #e0e0e0;
-}
-
-.lower-lg {
-  padding-top: 14px;
-  padding-left: 15px;
-}
-
-.lower-sm {
-  padding-top: 10px;
-  padding-left: 15px;
-}
-
-.helper {
-  z-index: 400;
-  visibility: hidden;
-  color: #ffffff;
-}
-
-.helper-lg {
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
-.helper-sm {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.space {
-  margin-left: 5px;
-}
-
-.lang-select {
-  min-width: 90px;
-  line-height: 24px;
-  font-size: 15px;
-}
-
-.navbar-brand {
-  font-family: Sabon, serif;
-}
-
-.upper-cn {
-  font-family: QiSubsets, sans-serif;
-}
-
-.upper-en {
-  font-family: FrutigerBold, sans-serif;
-}
-
-.lower-en {
-  font-family: BernierRegular, sans-serif;
-}
-
-.name {
-  margin-bottom: 25px;
-}
-
-.name-mu {
-  margin-left: 6px;
-  zoom: 0.8;
-  vertical-align: middle;
-}
-
-.name-han {
-  margin-left: 4px;
-  zoom: 1.1;
-  vertical-align: middle;
-}
-
-.body-color {
-  color: #5a5a5a !important;
+.main-color {
+  color: var(--fg-color) !important;
 }
 
 .gray-scale {
-  filter: grayscale(100%);
+  filter: grayscale(96%) !important;
 }
 
-@media (max-width: 719px) {
-  .name {
-    zoom: 1.2;
-    margin-bottom: 20px;
-    margin-left: -3px; /* lower padding 15px*1.2 = 18px */
-  }
-
-  .upper-lg {
-    padding-bottom: 10px;
-  }
-
-  .lower-lg {
-    padding-top: 10px;
-    padding-left: 15px;
-  }
-
-  .helper-lg {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
+.no-space {
+  font-size: 0 !important;
 }
 
+.email-link {
+  text-decoration: underline !important;
+  text-decoration-color: transparent !important;
+  transition: text-decoration-color .2s ease-in-out !important;
+}
+
+.email-link:hover {
+  text-decoration-color: inherit !important;
+}
+
+.title-link:hover {
+  opacity: .8 !important;
+}
+
+/* TITLE
+-------------------------------------------------- */
+
+:root {
+  --title-shift-v: .65rem;
+  --title-shift-h: 1.1rem;
+}
+
+hgroup {
+  margin-left: -.4rem;
+}
+
+hgroup .upper {
+  position: absolute;
+  z-index: 600;
+  color: var(--fg-color);
+  opacity: .95;
+  padding-bottom: var(--title-shift-v);
+  font-family: QiSubsets, sans-serif;
+}
+
+hgroup .lower {
+  position: absolute;
+  z-index: 500;
+  color: var(--fg-color);
+  opacity: .18;
+  padding-top: var(--title-shift-v);
+  padding-left: var(--title-shift-h);
+  font-family: BernierRegular, sans-serif;
+}
+
+hgroup .filler {
+  z-index: 400;
+  visibility: hidden;
+  color: transparent;
+  padding-bottom: var(--title-shift-v);
+}
+
+/* PROFILE: Name
+-------------------------------------------------- */
+
+#name {
+  zoom: 1.2;
+  margin-bottom: 0;
+}
+
+#name #li {
+  margin-left: -.08rem;
+  vertical-align: top;
+}
+
+#name #mu {
+  zoom: 0.8;
+  margin-left: .35rem;
+  vertical-align: baseline;
+}
+
+#name #han {
+  zoom: 1.1;
+  margin-left: .25rem;
+  vertical-align: middle;
+}
+
+#name #sp {
+  margin-right: .2rem;
+}
+
+#profile th {
+  padding-left: 0;
+  width: 0;
+  height: 2.1rem;
+  vertical-align: top;
+}
+
+#profile th, #profile td {
+  color: var(--fg-color);
+}
+
+.table-compact > :not(caption) > * > * {
+  padding: .25rem
+}
+
+/* PROFILE: Scrollable gallery
+-------------------------------------------------- */
+
+:root {
+  --fade-width-l: 7%;
+  --fade-width-r: 7%;
+  --image-width: 13%; /* of the container */
+  --image-margin: 1%; /* 15% total width each, 7 images shown at a time */
+}
+
+.mask, .scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.mask::before, .scroll-container::before, .scroll-container::after {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  content: '';
+}
+
+.mask::before {
+  z-index: 200;
+  width: 100%;
+  background: var(--bg-color);
+  opacity: .16;
+}
+
+.scroll-container img {
+  display: inline-block;
+  aspect-ratio: 1;
+  width: var(--image-width);
+  margin: var(--image-margin);
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+/* Bootstrap "sm" breakpoint */
 @media (min-width: 576px) {
-  .move-right {
-    padding-left: 40px;
+  hgroup {
+    margin-left: calc(-1 * var(--title-shift-h));
   }
 
-  .move-left {
-    margin-left: -15px;
+  .scroll-container::before {
+    left: 0;
+    width: var(--fade-width-l);
+    background: linear-gradient(to right, var(--bg-color), transparent);
   }
 
-  .title {
-    padding-left: 13px;
+  .scroll-container::after {
+    right: 0;
+    width: var(--fade-width-r);
+    background: linear-gradient(to left, var(--bg-color), transparent);
+
   }
 }
 
-.subtitle-gap {
-  margin-top: 6%;
-}
+/* Bootstrap "md" breakpoint */
+@media (min-width: 768px) {
+  #name {
+    zoom: 1.1;
+  }
 
-#top {
-  padding: 10px 30px;
-  margin-right: -30px;
+  #profile th {
+    height: 2.6rem;
+  }
+
+  .table-compact > :not(caption) > * > * {
+    padding: .5rem
+  }
+
+  .mask::before {
+    opacity: .11;
+  }
 }

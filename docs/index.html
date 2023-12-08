@@ -1,233 +1,284 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en">
 
-<head id="head">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="About me" />
-  <meta name="author" content="Muhan Li" />
-  <title>{{ title }}</title>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="About me"/>
+  <meta name="author" content="Muhan Li"/>
+  <title>Muhan Li &#x2005;&#x2502;&#x2005; About me</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-  <link rel="stylesheet" type="text/css" href="css/global.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/fonts.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+  <!-- Bootstrap core JS -->
+  <script defer src="js/bootstrap.bundle.min.js"></script>
 
   <!-- Vue 2 core JS -->
-  <script src="js/vue.js"></script>
-  <!--
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  -->
+  <script defer src="js/vue.min.js"></script>
+  <!-- Custom Vue JS -->
+  <script defer src="js/app.js" type="module"></script>
+
+  <!-- Masonry JS for waterfall layout -->
+  <script defer src="js/masonry.pkgd.min.js"></script>
 </head>
 
-<body class="d-flex flex-column h-100">
-  <div id="content">
+<body class="d-flex flex-column h-100 sans">
 
-  <transition name="fade">
-    <section v-if="loading" class="user-select-none"><h1>Loading...</h1></section>
-  </transition>
+<!-- SVG definitions -->
+<div class="d-none">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-envelope" viewBox="0 0 16 16">
+      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path>
+    </symbol>
 
-  <header>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow navbar-blur">
-      <div class="container-fluid">
-        <a class="navbar-brand user-select-none" href="/">Hello World</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <symbol id="icon-translate" viewBox="0 0 16 16">
+      <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"></path>
+      <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"></path>
+    </symbol>
 
-        <div class="collapse navbar-collapse user-select-none" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item"><a class="nav-link active" rel="noreferrer noopener" href="https://muhan.li/">About Me</a></li>
-            <li class="nav-item"><a class="nav-link" rel="noreferrer noopener" href="https://blog.muhan.li/">Tech Blog</a></li>
-            <li class="nav-item"><a class="nav-link" rel="noreferrer noopener" href="https://github.com/muhac/">GitHub</a></li>
-          </ul>
-          <div class="d-flex float-end user-select-none">
-            <a class="btn btn-secondary space lang-select" v-if="zh" @click="lang_en" role="button">English</a>
-            <a class="btn btn-secondary space lang-select" v-if="en" @click="lang_zh" role="button">简体中文</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+    <symbol id="icon-location" viewBox="0 0 16 16">
+      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"></path>
+      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path>
+    </symbol>
 
-  <main>
-    <!-- Begin page content -->
-    <div class="flex-shrink-0 main-page">
-      <div class="container">
-        <div class="row upper-lg">
-          <div class="col-lg-1">
-          </div><!-- /.col-lg-1 -->
+    <symbol id="icon-clock" viewBox="0 0 16 16">
+      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path>
+      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"></path>
+    </symbol>
+  </svg>
+</div>
 
-          <div class="col-lg-4">
-            <div class="title position-sticky user-select-none">
-              <div class="name">
-                <h1 class="upper upper-lg upper-cn move-left"><span>李</span><span class="name-mu">木</span><span class="name-han">晗</span></h1>
-                <h1 class="lower lower-lg lower-en"><span>Li</span><span>,</span><span class="space">Muhan</span></h1>
-                <h1 class="helper helper-lg">name</h1>
-              </div>
-              <div>
-                <h5 class="upper upper-sm upper-en"><a class="text-decoration-none body-color user-select-all" :href="'mailto:' + info.name.toLowerCase() + info.mail">{{ info.name }}{{ info.mail }}</a></h5>
-                <h5 class="lower lower-sm lower-en"><span>Email</span><span class="space">Address</span></h5>
-                <h5 class="helper helper-sm">email</h5>
-              </div>
-              <div>
-                <h5 class="upper upper-sm upper-en"><span class="text-decoration-none body-color">{{ info.city }}</span></h5>
-                <h5 class="lower lower-sm lower-en"><span>Location</span><span class="space">{{ info.tz }}</span></h5>
-                <h5 class="helper helper-sm">location</h5>
-              </div>
-              <div class="d-none">Last updated at: {{ info.update }}</div>
+<!-- BEGIN: Vue app -->
+<div id="app" :lang="lang">
+
+<transition name="fade">
+  <aside v-if="loading" class="user-select-none"><h1>Loading...</h1></aside>
+</transition>
+
+<main>
+
+  <!-- BEGIN: Content -->
+  <div class="flex-shrink-0">
+    <div class="container">
+
+      <!-- BEGIN: Profile -->
+      <section id="profile" class="row">
+
+        <!-- BEGIN: Scroll gallery -->
+        <div class="col-lg-8 p-0 px-lg-2 order-1 order-lg-2">
+
+          <!-- control the margin of the page top -->
+          <div class="sticky-top pt-1 pt-sm-2 pt-md-3 pt-xl-5">
+
+            <div class="mask">
+              <div class="scroll-container">
+
+                <!-- @mouseenter="pauseScroll(index)" @mouseleave="resumeScroll(index)" -->
+                <div v-for="(images, index) in skills" ref="scrollDisplay" :key="index">
+                  <span class="no-space user-select-none" ref="scrollContent">
+                    <!-- Repeat the images to simulate infinite loop -->
+                    <img class="gray-scale scroll-img p-xl-3 p-lg-2"
+                         v-for="image in images.concat(images)"
+                         :src="image.logo" :alt="image.name">
+                  </span>
+                </div>
+
+              </div><!-- /.scroll-container -->
+            </div><!-- /.mask -->
+
+          </div><!-- /.sticky-top -->
+        </div><!-- /.col-lg-8 right -->
+        <!-- END: Scroll gallery -->
+
+        <!-- BEGIN: Personal Info -->
+        <div class="col-lg-4 col-xl-3 order-2 order-lg-1">
+
+          <!-- control the margin of the page top -->
+          <div class="sticky-top pt-lg-4 pt-xl-5 ps-3 ps-xl-0">
+
+            <!-- control the margin compared to the scroll container -->
+            <div class="mt-4 mt-lg-2 pt-3 pt-xl-5 pb-lg-2 pb-xl-3">
+
+              <hgroup id="name" class="user-select-none pb-lg-3">
+                <h1 class="upper"><span id="li">李</span><span id="mu">木</span><span id="han">晗</span></h1>
+                <h1 class="lower"><span id="ln">Li</span><span id="sp">,</span><span id="fn">Muhan</span></h1>
+                <h1 class="filler">&zwj;</h1>
+              </hgroup>
+
+              <table class="table table-borderless table-compact mb-0">
+                <tbody class="align-bottom">
+
+                <tr><!-- Email -->
+                  <th>
+                    <svg width="16" height="16" fill="currentColor">
+                      <use xlink:href="#icon-envelope"></use>
+                    </svg>
+                  </th>
+                  <td>
+                    <a class="text-decoration-none user-select-all main-color email-link"
+                       :href="'mailto:' + name.toLowerCase() + mail">{{ name }}{{ mail }}</a>
+                  </td>
+                </tr>
+
+                <tr><!-- City -->
+                  <th>
+                    <svg width="16" height="16" fill="currentColor">
+                      <use xlink:href="#icon-location"></use>
+                    </svg>
+                  </th>
+                  <td>{{ city }}</td>
+                </tr>
+
+                <tr><!-- Time -->
+                  <th>
+                    <svg width="16" height="16" fill="currentColor">
+                      <use xlink:href="#icon-clock"></use>
+                    </svg>
+                  </th>
+                  <td>
+                    <time>{{ time }}</time> &centerdot; {{ utcD }}
+                  </td>
+                </tr>
+
+                </tbody>
+              </table>
             </div>
-          </div><!-- /.col-lg-4 -->
 
-          <div class="col-lg-7 move-right">
-            <div class="move-left user-select-none">
-              <h2 class="upper upper-lg upper-cn"><span>工作经历</span></h2>
-              <h2 class="lower lower-lg lower-en"><span>Experience</span></h2>
-              <h2 class="helper helper-lg">experience</h2>
+          </div><!-- /.sticky-top -->
+        </div><!-- /.col-lg-4 left -->
+        <!-- END: Personal Info -->
+
+        <!-- padding for the left side -->
+        <div class="col-xl-1 d-none d-xl-block order-0"></div>
+
+      </section><!-- /.row -->
+      <!-- END: Profile -->
+
+      <!-- BEGIN: Experiences -->
+      <section id="experiences" class="row mt-md-3 mt-lg-0 mb-4 mb-md-3 mb-lg-1 mb-xl-4">
+
+        <!-- padding for the left side -->
+        <div class="col-xl-1 d-none d-xl-block order-0"></div>
+        <div class="col-xl-1 d-none d-xl-block order-2"></div>
+
+        <div class="col-lg-6 col-xl-5"
+             v-for="(item, index) in contents"
+             :class="'order-' + (index*2+1)"> <!-- order-1, order-3 -->
+
+          <!-- controls the margin of the page top -->
+          <div class="sticky-top px-3 ps-xl-0 pb-md-3 mb-md-1 pt-4 pt-md-3 pt-lg-4 pt-xl-5">
+
+            <hgroup class="user-select-none">
+              <h2 class="upper">{{ item.cn }}</h2>
+              <h2 class="lower">{{ item.en }}</h2>
+              <h2 class="filler">&zwj;</h2>
+            </hgroup>
+
+            <div class="mt-2 mt-md-3 mt-xl-4 pt-1 pt-lg-0 pt-xl-2" v-for="each in item.data">
+              <h5>
+                <a class="text-decoration-none main-color title-link"
+                   :href="each.website" target="_blank">{{ each.company }}</a>
+              </h5>
+              <p class="m-0">
+                <span>{{ each.start_yr }}.{{ each.start_mo }}</span>&thinsp;&hyphen;&thinsp;<span
+                  v-if=each.current>{{ each.current }}</span><span
+                  v-else>{{ each.leave_yr }}.{{ each.leave_mo }}</span> &centerdot; <span
+                  v-if=each.current>{{ each.elapsed }}</span><span
+                  v-else>{{ each.lasting }}</span><br/>
+                {{ each.title }}<br/>
+                {{ each.desc }}<br/>
+                {{ each.city }}
+              </p>
             </div>
-            <h5 v-if="en"><a class="body-color link-secondary text-decoration-none" :href="exp.baidu.url.en" target="_blank">{{ exp.baidu.name.en }}</a></h5>
-            <h5 v-if="zh"><a class="body-color link-secondary text-decoration-none" :href="exp.baidu.url.zh" target="_blank">{{ exp.baidu.name.zh }}</a></h5>
-            <p v-if="en">
-              {{ exp.baidu.start.yr }}.{{ exp.baidu.start.mo }}&thinsp;&hyphen;&thinsp;{{ exp.baidu.leave.yr }}.{{ exp.baidu.leave.mo }} · {{ exp.baidu.lasting.en }}<br />
-              {{ exp.baidu.position.en }}<br />
-              {{ exp.baidu.skills.en }}<br />
-              {{ exp.baidu.city.en }}
-            </p>
-            <p v-if="zh">
-              {{ exp.baidu.start.yr }}.{{ exp.baidu.start.mo }}&thinsp;&hyphen;&thinsp;{{ exp.baidu.leave.yr }}.{{ exp.baidu.leave.mo }} · {{ exp.baidu.lasting.zh }}<br />
-              {{ exp.baidu.position.zh }}<br />
-              {{ exp.baidu.skills.zh }}<br />
-              {{ exp.baidu.city.zh }}
-            </p>
 
-            <div class="move-left subtitle-gap user-select-none">
-              <h2 class="upper upper-lg upper-cn"><span>教育背景</span></h2>
-              <h2 class="lower lower-lg lower-en"><span>Education</span></h2>
-              <h2 class="helper helper-lg">education</h2>
+          </div><!-- /.sticky-top -->
+        </div><!-- /.col-lg-6 x2 -->
+
+      </section>
+      <!-- END: Experiences -->
+
+      <!-- BEGIN: Projects -->
+      <section id="projects" class="row" data-masonry='{"percentPosition": true }'>
+
+        <!-- TODO -->
+        <div class="col-lg-6 mb-3 mb-md-4 px-xl-3 pb-xl-2">
+          <div class="card main-color">
+            <div class="card-header">Projects</div>
+            <div class="card-body">
+              <h5 class="card-title">Recent updates</h5>
+              <p class="card-text placeholder-glow user-select-none">
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-3"></span>
+                <span class="placeholder col-5"></span>
+              </p>
             </div>
-            <h5 v-if="en"><a class="body-color link-secondary text-decoration-none" :href="edu.ntu.url.en" target="_blank">{{ edu.ntu.name.en }}</a></h5>
-            <h5 v-if="zh"><a class="body-color link-secondary text-decoration-none" :href="edu.ntu.url.zh" target="_blank">{{ edu.ntu.name.zh }}</a></h5>
-            <p v-if="en">
-              {{ current.start.yr }}.{{ current.start.mo }}&thinsp;&hyphen;&thinsp;{{ current.present.en }} · {{ current.lasting.en }}<br />
-              <!--{{ edu.ntu.start.yr }}.{{ edu.ntu.start.mo }}&thinsp;&hyphen;&thinsp;{{ edu.ntu.leave.yr }}.{{ edu.ntu.leave.mo }} · {{ edu.ntu.grade.en }}<br />-->
-              {{ edu.ntu.major.en }}<br />
-              {{ edu.ntu.school.en }}<br />
-              {{ edu.ntu.city.en }}
-            </p>
-            <p v-if="zh">
-              {{ current.start.yr }}.{{ current.start.mo }}&thinsp;&hyphen;&thinsp;{{ current.present.zh }} · {{ current.lasting.zh }}<br />
-              <!--{{ edu.ntu.start.yr }}.{{ edu.ntu.start.mo }}&thinsp;&hyphen;&thinsp;{{ edu.ntu.leave.yr }}.{{ edu.ntu.leave.mo }} · {{ edu.ntu.grade.zh }}<br />-->
-              {{ edu.ntu.major.zh }}<br />
-              {{ edu.ntu.school.zh }}<br />
-              {{ edu.ntu.city.zh }}
-            </p>
-            <h5 v-if="en"><a class="body-color link-secondary text-decoration-none" :href="edu.hitsz.url.en" target="_blank">{{ edu.hitsz.name.en }}</a></h5>
-            <h5 v-if="zh"><a class="body-color link-secondary text-decoration-none" :href="edu.hitsz.url.zh" target="_blank">{{ edu.hitsz.name.zh }}</a></h5>
-            <p v-if="en">
-              {{ edu.hitsz.start.yr }}.{{ edu.hitsz.start.mo }}&thinsp;&hyphen;&thinsp;{{ edu.hitsz.leave.yr }}.{{ edu.hitsz.leave.mo }} · {{ edu.hitsz.grade.en }}<br />
-              {{ edu.hitsz.major.en }}<br />
-              {{ edu.hitsz.school.en }}<br />
-              {{ edu.hitsz.city.en }}
-            </p>
-            <p v-if="zh">
-              {{ edu.hitsz.start.yr }}.{{ edu.hitsz.start.mo }}&thinsp;&hyphen;&thinsp;{{ edu.hitsz.leave.yr }}.{{ edu.hitsz.leave.mo }} · {{ edu.hitsz.grade.zh }}<br />
-              {{ edu.hitsz.major.zh }}<br />
-              {{ edu.hitsz.school.zh }}<br />
-              {{ edu.hitsz.city.zh }}
-            </p>
-          </div><!-- /.col-lg-7 -->
-        </div><!-- /.row -->
-
-        <!-- Calendly inline widget begin -- >
-        <div class="calendly-inline-widget" data-url="https://calendly.com/limuhan/hi?primary_color=212529" style="min-width:320px;height:660px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
-
-        <hr class="featurette-divider" />
-
-        <!-- START THE FEATURETTES -->
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">
-              Melody embedding <span class="text-muted">borrowed from word2vec and doc2vec.</span>
-            </h2>
-            <p class="lead">
-              Based on <a class="link-secondary text-decoration-none" href="https://www.jstage.jst.go.jp/article/ipsjjip/27/0/27_278/_pdf" target="_blank">Tatsunori Hirai's melody2vec,</a> I implemented song2vec, which can map not only melody fragments but also whole songs to vectors. <a class="link-secondary text-decoration-none" href="https://github.com/muhac/melody-embedding" target="_blank">Open source on GitHub.</a>
-            </p>
-            <p class="text-black-50">
-              2021, Outstanding Graduation Project of Harbin Institute of Technology
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto gray-scale" width="500" height="500" src="/assets/muhac_docs/img/melodic-figures-sq.png"></img>
           </div>
         </div>
 
-        <hr class="featurette-divider-min" />
+        <!-- BEGIN: Project cards -->
+        <div class="col-lg-6 mb-3 mb-md-4 px-xl-3 pb-xl-2"
+             v-for="project in projects">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">
-              Fast neural style transfer <span class="text-muted">for image processing.</span>
-            </h2>
-            <p class="lead">
-              <a class="link-secondary text-decoration-none" href="https://arxiv.org/abs/1603.08155" target="_blank">Johnson et al.'s fast style transfer</a> is a method for merging the content of one image with the style of another. Built and deployed as a web application. <a class="link-secondary text-decoration-none" href="https://github.com/muhac/fast-neural-style-transfer" target="_blank">Open source on GitHub.</a>
-            </p>
-            <p class="text-black-50">
-              2020, Chinese Computer Software Copyright Certificate
-            </p>
+          <div class="card main-color">
+            <img class="card-img-top gray-scale user-select-none"
+                 :src=project.img_url :alt=project.img_alt
+                 :style="'aspect-ratio:' + project.img_woh">
+
+            <div class="card-body">
+              <h5 class="card-title" v-html="project.heading"></h5>
+              <h6 class="card-text text-muted" v-html="project.content"></h6>
+              <div class="card-text text-muted mb-3 small" v-html="project.message"></div>
+              <a class="btn btn-secondary" :href=project.btn_url target="_blank">{{ project.btn_txt }}</a>
+            </div>
           </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto gray-scale" width="500" height="500" src="/assets/muhac_docs/img/fast-neural-style-transfer-sq.png"></img>
-          </div>
+
         </div>
+        <!-- END: Project cards -->
 
-        <!--
-        <hr class="featurette-divider-min" />
+      </section>
+      <!-- END: Projects -->
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">
-              Tic-tac-toe game <span class="text-muted">with minimax algorithm.</span>
-            </h2>
-            <p class="lead">
-              Minimax is a decision rule that minimizes the possible loss for a worst case scenario. <a class="link-secondary text-decoration-none" href="https://tictactoe.github.rank.technology/" target="_blank">Try out this game,</a> you can never beat the AI. <a class="link-secondary text-decoration-none" href="https://github.com/theRank/tic-tac-toe-game" target="_blank">Open source on GitHub.</a>
-            </p>
-            <p class="text-black-50">
-              2019
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto gray-scale" width="500" height="500" src="/assets/muhac_docs/img/tic-tac-toe.png"></img>
-          </div>
-        </div>
-        --->
-
-        <!-- /END THE FEATURETTES -->
-
-      </div><!-- /.container -->
-    </div>
-  </main>
-
-  <footer class="footer fixed-bottom mt-auto py-3 bg-light footer-blur">
-    <div class="container user-select-none">
-      <span class="text-muted">
-        <span class="text-nowrap">Copyright &copy; 2021&thinsp;&hyphen;&thinsp;{{ current.leave.yr }} Muhan Li.</span>
-        <span class="text-nowrap">All rights reserved.</span>
-      </span>
-      <span class="float-end d-none d-md-block">
-        <a class="link-secondary text-decoration-none" id="top" href="#">⇧</a>
-      </span>
-    </div>
-  </footer>
+    </div><!-- /.container -->
   </div>
+  <!-- END: Content -->
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/app.js"></script>
+  <!-- This div is used to control the bottom margin of the page, no extra margin required for the last section -->
+  <div class="text-center no-space user-select-none p-3 p-sm-4 mt-4 mt-lg-3 mt-xl-4">Last updated on {{ update }}</div>
+
+</main>
+
+<footer class="footer fixed-bottom mt-auto py-3 bg-light footer-blur">
+  <div class="container user-select-none">
+
+    <!-- BEGIN: Footer left -->
+    <span class="text-muted">
+        <span class="text-nowrap">Copyright &copy; 2021&thinsp;&hyphen;&thinsp;{{ year }} Muhan Li.</span>
+        <span class="text-nowrap d-none d-sm-inline">All rights reserved.</span>
+      </span>
+    <!-- END: Footer left -->
+
+    <!-- BEGIN: Footer right -->
+    <span class="float-end">
+        <!-- Switch language -->
+        <a @click="switch_lang" role="button">
+          <svg width="16" height="16" fill="currentColor">
+            <use xlink:href="#icon-translate"></use>
+          </svg>
+        </a>
+      </span>
+    <!-- END: Footer right -->
+
+  </div>
+</footer>
+
+</div>
+<!-- END: Vue app -->
+
 </body>
-
 </html>
