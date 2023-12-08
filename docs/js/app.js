@@ -42,9 +42,7 @@ const app = new Vue({
       this.time = getLocalTime(this.tz);
     }, 1000);
 
-    setTimeout(() => {
-      this.loading = false;
-    }, 100);
+    this.loading = false;
   },
 
   methods: {

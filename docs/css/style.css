@@ -28,6 +28,11 @@ footer {
 /* LOADING MASK
 -------------------------------------------------- */
 
+:root {
+  --loading-mask-animation-duration: .4s;
+  --loading-mask-gradient-size: 50%;
+}
+
 aside {
   z-index: 100000;
   opacity: 1;
@@ -38,27 +43,33 @@ aside {
   top: 0;
   left: 0;
   text-align: center;
-  background-color: #f8f9fa;
+  background-color: var(--bg-color);
 }
 
-aside h1 {
-  font-family: "Times New Roman", "Courier New", serif;
-  height: calc(100vh - 50px);
-  line-height: 100vh;
+aside::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--loading-mask-gradient-size));
+  left: 0;
+  right: 0;
+  height: calc(var(--loading-mask-gradient-size));
+  background: linear-gradient(to top, var(--bg-color), transparent);
 }
 
-.fade-leave-active,
-.fade-leave-to,
-.fade-enter {
-  transition: all 0.3s ease-in;
-  opacity: 0;
+/* fade out end point */
+.mask-leave-active,
+.mask-leave-to,
+.mask-enter {
+  transition: all var(--loading-mask-animation-duration) ease-in-out;
+  transform: translateY(calc(100% + var(--loading-mask-gradient-size)));
 }
 
-.fade-enter-active,
-.fade-enter-to,
-.fade-leave {
-  transition: all 0.3s ease-in;
-  opacity: 1;
+/* fade out start point */
+.mask-enter-active,
+.mask-enter-to,
+.mask-leave {
+  transition: all var(--loading-mask-animation-duration) ease-in-out;
+  transform: translateY(0);
 }
 
 /* SCROLLBAR
@@ -80,7 +91,7 @@ html {
 
 /* Scrollbar track */
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: var(--bg-color);
 }
 
 /* Scrollbar thumb */
@@ -99,6 +110,7 @@ html {
 /* Bottom button of the scrollbar */
 ::-webkit-scrollbar-button:end:increment,
 ::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-color: var(--bg-color);
   height: var(--footer-height);
   border-top: var(--footer-border);
 }
@@ -179,39 +191,37 @@ hgroup .filler {
 }
 
 #name #li {
+  font-size: 95%;
+  padding-top: 2%;
   margin-left: -.08rem;
-  vertical-align: top;
 }
 
 #name #mu {
-  zoom: 0.8;
+  font-size: 80%;
+  padding-top: 5%;
   margin-left: .35rem;
-  vertical-align: baseline;
 }
 
 #name #han {
-  zoom: 1.1;
-  margin-left: .25rem;
-  vertical-align: middle;
+  font-size: 110%;
+  margin-left: .3rem;
 }
 
 #name #sp {
   margin-right: .2rem;
 }
 
-#profile th {
-  padding-left: 0;
-  width: 0;
-  height: 2.1rem;
-  vertical-align: top;
-}
-
-#profile th, #profile td {
+#profile th,
+#profile td {
   color: var(--fg-color);
+  padding: .25rem
 }
 
-.table-compact > :not(caption) > * > * {
-  padding: .25rem
+#profile th {
+  padding-left: 0 !important;
+  height: 2.1rem;
+  width: 1.6rem;
+  vertical-align: top;
 }
 
 /* PROFILE: Scrollable gallery
@@ -224,13 +234,16 @@ hgroup .filler {
   --image-margin: 1%; /* 15% total width each, 7 images shown at a time */
 }
 
-.mask, .scroll-container {
+.scroll-mask,
+.scroll-container {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
 }
 
-.mask::before, .scroll-container::before, .scroll-container::after {
+.scroll-mask::before,
+.scroll-container::before,
+.scroll-container::after {
   z-index: 100;
   position: absolute;
   top: 0;
@@ -238,7 +251,7 @@ hgroup .filler {
   content: '';
 }
 
-.mask::before {
+.scroll-mask::before {
   z-index: 200;
   width: 100%;
   background: var(--bg-color);
@@ -281,15 +294,16 @@ hgroup .filler {
     zoom: 1.1;
   }
 
+  #profile th,
+  #profile td {
+    padding: .5rem
+  }
+
   #profile th {
     height: 2.6rem;
   }
 
-  .table-compact > :not(caption) > * > * {
-    padding: .5rem
-  }
-
-  .mask::before {
+  .scroll-mask::before {
     opacity: .11;
   }
 }

@@ -56,8 +56,10 @@
 <!-- BEGIN: Vue app -->
 <div id="app" :lang="lang">
 
-<transition name="fade">
-  <aside v-if="loading" class="user-select-none"><h1>Loading...</h1></aside>
+<transition name="mask">
+  <aside v-if="loading">
+    <!-- Warning: add text here will cause the page to jump in Edge -->
+  </aside>
 </transition>
 
 <main>
@@ -75,7 +77,7 @@
           <!-- control the margin of the page top -->
           <div class="sticky-top pt-1 pt-sm-2 pt-md-3 pt-xl-5">
 
-            <div class="mask">
+            <div class="scroll-mask">
               <div class="scroll-container">
 
                 <!-- @mouseenter="pauseScroll(index)" @mouseleave="resumeScroll(index)" -->
@@ -105,12 +107,16 @@
             <div class="mt-4 mt-lg-2 pt-3 pt-xl-5 pb-lg-2 pb-xl-3">
 
               <hgroup id="name" class="user-select-none pb-lg-3">
-                <h1 class="upper"><span id="li">李</span><span id="mu">木</span><span id="han">晗</span></h1>
-                <h1 class="lower"><span id="ln">Li</span><span id="sp">,</span><span id="fn">Muhan</span></h1>
+                <h1 class="upper d-flex align-self-lg-start">
+                  <span id="li">李</span><span id="mu">木</span><span id="han">晗</span>
+                </h1>
+                <h1 class="lower d-flex align-self-lg-start">
+                  <span id="ln">Li</span><span id="sp">,</span><span id="fn">Muhan</span>
+                </h1>
                 <h1 class="filler">&zwj;</h1>
               </hgroup>
 
-              <table class="table table-borderless table-compact mb-0">
+              <table class="table table-borderless mb-0">
                 <tbody class="align-bottom">
 
                 <tr><!-- Email -->
