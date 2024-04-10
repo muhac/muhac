@@ -3,22 +3,22 @@
 
 @font-face {
   font-family: Sabon;
-  src: url("/assets/muhac_docs/font/SabonRegular.otf");
+  src: url("/assets/font/SabonRegular.otf");
 }
 
 @font-face {
   font-family: Frutiger;
-  src: url("/assets/muhac_docs/font/FrutigerRegular.ttf");
+  src: url("/assets/font/FrutigerRegular.ttf");
 }
 
 @font-face {
   font-family: Monaco;
-  src: url("/assets/muhac_docs/font/Monaco.ttf");
+  src: url("/assets/font/Monaco.ttf");
 }
 
 @font-face {
   font-family: FrutigerBold;
-  src: url("/assets/muhac_docs/font/FrutigerMedium.ttf");
+  src: url("/assets/font/FrutigerMedium.ttf");
 }
 
 @font-face {
@@ -42,6 +42,10 @@
 
 .sans {
   font-family: Frutiger, sans-serif;
+}
+
+.sans-bold {
+  font-family: FrutigerBold, sans-serif;
 }
 
 .mono {

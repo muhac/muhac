@@ -49,7 +49,7 @@ export const data = {
       content: "Based on <a class=\"link-secondary text-decoration-none\" href=\"https://www.jstage.jst.go.jp/article/ipsjjip/27/0/27_278/_pdf\" target=\"_blank\">Tatsunori Hirai's melody2vec,</a> I implemented song2vec, which can map not only melody fragments but also whole songs to vectors.",
       btn_url: "https://github.com/muhac/melody-embedding",
       btn_txt: "Open source on GitHub",
-      img_url: "/assets/muhac_docs/img/melodic-figures.png",
+      img_url: "/assets/img/melodic-figures.png",
       img_alt: "Melody Segmentation",
       img_woh: 3988 / 2441,
     },
@@ -59,7 +59,7 @@ export const data = {
       content: "<a class=\"link-secondary text-decoration-none\" href=\"https://arxiv.org/abs/1603.08155\" target=\"_blank\">Johnson et al.'s fast style transfer</a> is a method for merging the content of one image with the style of another. Built and deployed as a web application.",
       btn_url: "https://github.com/muhac/fast-neural-style-transfer",
       btn_txt: "Open source on GitHub",
-      img_url: "/assets/muhac_docs/img/fast-neural-style-transfer.png",
+      img_url: "/assets/img/fast-neural-style-transfer.png",
       img_alt: "Fast Neural Style Transfer",
       img_woh: 675 / 445,
     },
@@ -67,69 +67,69 @@ export const data = {
   skills: [
     [{
       "name": "Bash",
-      "logo": "/assets/muhac_docs/logo/bash.svg",
+      "logo": "/assets/logo/bash.svg",
     }, {
       "name": "Python",
-      "logo": "/assets/muhac_docs/logo/python.svg",
+      "logo": "/assets/logo/python.svg",
     }, {
       "name": "Go",
-      "logo": "/assets/muhac_docs/logo/go.svg",
+      "logo": "/assets/logo/go.svg",
     }, {
       "name": "JavaScript",
-      "logo": "/assets/muhac_docs/logo/javascript.svg",
+      "logo": "/assets/logo/javascript.svg",
     }, {
       "name": "HTML",
-      "logo": "/assets/muhac_docs/logo/html5.svg",
+      "logo": "/assets/logo/html5.svg",
     }, {
       "name": "CSS",
-      "logo": "/assets/muhac_docs/logo/css3.svg",
+      "logo": "/assets/logo/css3.svg",
     }, {
       "name": "Haskell",
-      "logo": "/assets/muhac_docs/logo/haskell.svg",
+      "logo": "/assets/logo/haskell.svg",
     }],
     [{
       "name": "Vue.js",
-      "logo": "/assets/muhac_docs/logo/vuejs.svg",
+      "logo": "/assets/logo/vuejs.svg",
     }, {
       "name": "Bootstrap",
-      "logo": "/assets/muhac_docs/logo/bootstrap.svg",
+      "logo": "/assets/logo/bootstrap.svg",
     }, {
       "name": "Nginx",
-      "logo": "/assets/muhac_docs/logo/nginx.svg",
+      "logo": "/assets/logo/nginx.svg",
     }, {
       "name": "Django",
-      "logo": "/assets/muhac_docs/logo/django.svg",
+      "logo": "/assets/logo/django.svg",
     }, {
       "name": "Flask",
-      "logo": "/assets/muhac_docs/logo/flask.svg",
+      "logo": "/assets/logo/flask.svg",
     }, {
       "name": "Gin",
-      "logo": "/assets/muhac_docs/logo/gin.svg",
+      "logo": "/assets/logo/gin.svg",
     }, {
       "name": "PyTorch",
-      "logo": "/assets/muhac_docs/logo/pytorch.svg",
+      "logo": "/assets/logo/pytorch.svg",
     }],
     [{
       "name": "Linux",
-      "logo": "/assets/muhac_docs/logo/linux.svg",
+      "logo": "/assets/logo/linux.svg",
     }, {
       "name": "Proxmox VE",
-      "logo": "/assets/muhac_docs/logo/proxmox.svg",
+      "logo": "/assets/logo/proxmox.svg",
     }, {
       "name": "AWS",
-      "logo": "/assets/muhac_docs/logo/aws.svg",
+      "logo": "/assets/logo/aws.svg",
     }, {
       "name": "Docker",
-      "logo": "/assets/muhac_docs/logo/docker.svg",
+      "logo": "/assets/logo/docker.svg",
     }, {
       "name": "MySQL",
-      "logo": "/assets/muhac_docs/logo/mysql.svg",
+      "logo": "/assets/logo/mysql.svg",
     }, {
       "name": "Redis",
-      "logo": "/assets/muhac_docs/logo/redis.svg",
+      "logo": "/assets/logo/redis.svg",
     }, {
       "name": "Git",
-      "logo": "/assets/muhac_docs/logo/git.svg",
+      "logo": "/assets/logo/git.svg",
     }],
   ],
   skills_scroll_frames: [2500, 3000, 3500], //  typical 60 fps

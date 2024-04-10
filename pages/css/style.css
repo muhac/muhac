@@ -284,7 +284,10 @@ hgroup .filler {
     right: 0;
     width: var(--fade-width-r);
     background: linear-gradient(to left, var(--bg-color), transparent);
+  }
 
+  .scroll-mask::before {
+    opacity: .35;
   }
 }
 
@@ -302,8 +305,11 @@ hgroup .filler {
   #profile th {
     height: 2.6rem;
   }
+}
 
+/* Bootstrap "lg" breakpoint */
+@media (min-width: 992px) {
   .scroll-mask::before {
-    opacity: .11;
+    opacity: .95;
   }
 }
