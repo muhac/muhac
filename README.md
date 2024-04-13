@@ -1,16 +1,4 @@
-<div align="center">
-  <a href="#">
-    <img width="400px" alt="Top of pokeball" src="https://muhan.li/assets/muhac_readme/pokeball_top.png" />
-  </a>
-
-  <details>
-    <summary><b>OPEN PROFILE</b></summary>
-    <br />
-    Hello World
-    <p>&thinsp;</p>
-  </details>
-
-  <a href="#">
-    <img width="400px" alt="Bottom of pokeball" src="https://muhan.li/assets/muhac_readme/pokeball_bottom.png" />
-  </a>
-</div>
+<!-- https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file -->
+[
+![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=ai&langs_count=8&hide=other&custom_title=So%20far%2C%20I%20only%20coded...&layout=compact&hide_border=true&theme=transparent&title_color=4499DD&text_color=5588BB)
+](https://github.com/muhac)
