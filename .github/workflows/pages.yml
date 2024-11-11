@@ -31,13 +31,47 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: true # Checkout private submodules(themes or something else).
+
+      - name: Setup npm
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: |
+          npm install --force --verbose
+          npm list
+
+      - name: Configuration and patch
+        run: |
+          cp -r conf/themes/* themes/
+          cp -r conf/modules/* node_modules/
+
+      - name: List node modules
+        run: tree -L 2 node_modules
+
+      - name: Install Hexo
+        run: npm install -g hexo-cli
+
+      - name: Build static content
+        run: hexo generate
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: './pages'
+          path: './public'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Debug node modules
+        uses: actions/upload-artifact@v4
+        with:
+          name: node-modules
+          path: node_modules
