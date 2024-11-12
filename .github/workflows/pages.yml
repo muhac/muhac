@@ -54,6 +54,12 @@ jobs:
       - name: Install Hexo
         run: npm install -g hexo-cli
 
+      - name: Check Hexo version
+        run: |
+          node -v
+          npm -v
+          hexo -v
+
       - name: Build static content
         run: hexo generate
 

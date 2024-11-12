@@ -13,7 +13,7 @@ timezone: America/Toronto
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://blog.muhan.li
+url: https://muhan.li
 root: /
 permalink: post/:category/:post_title/
 permalink_defaults:
@@ -51,6 +51,8 @@ highlight:
   tab_replace: ''
   wrap: true
   hljs: false
+  exclude_languages:
+    - mermaid
 prismjs:
   enable: false
   preprocess: true

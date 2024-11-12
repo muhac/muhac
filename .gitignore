@@ -1,6 +1,10 @@
 .DS_Store
 .idea/
 
+# hexo files
+db.json
+public/
+
 # Logs
 logs
 *.log
