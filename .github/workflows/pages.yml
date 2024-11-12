@@ -46,11 +46,10 @@ jobs:
 
       - name: Configuration and patch
         run: |
-          cp -r conf/themes/* themes/
           cp -r conf/modules/* node_modules/
 
       - name: List node modules
-        run: tree -L 2 node_modules
+        run: tree -L 1 node_modules
 
       - name: Install Hexo
         run: npm install -g hexo-cli

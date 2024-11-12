@@ -57,6 +57,15 @@ prismjs:
   line_number: true
   tab_replace: ''
 
+symbols_count_time:
+  symbols: true
+  time: false
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  awl: 4
+  wpm: 250
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
