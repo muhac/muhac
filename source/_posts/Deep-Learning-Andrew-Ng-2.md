@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (2) · Neural Networks Basics
 date: 2020-03-25 10:10:10
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, Neural Networks]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

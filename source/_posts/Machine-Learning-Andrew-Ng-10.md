@@ -1,8 +1,8 @@
 ---
 title: Machine Learning (10) · Recommender Systems
 date: 2021-02-15 11:49:22
-tags: [Artificial Intelligence, Machine Learning]
-categories: [Open Course, Machine Learning]
+tags: [Artificial Intelligence, Machine Learning, Recommender Systems]
+categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 
@@ -113,4 +113,3 @@ $Y=\begin{bmatrix} 5&5&0&0&? \\ 5&?&?&0&? \\ ?&4&0&?&? \\ 0&0&5&4&? \\ 0&0&5&0&?
 
 For user $j$ on movie $i$, predict $\left(\theta^\left(j\right)\right)\left(x^\left(i\right)\right)+\mu_i$<br>
 $\qquad$new users: $\theta=\vec{0} \:\Rightarrow\: \left(\theta^\left(j\right)\right)\left(x^\left(i\right)\right)+\mu_i = \mu_i$
-

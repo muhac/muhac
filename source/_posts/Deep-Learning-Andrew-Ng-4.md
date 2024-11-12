@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (4) · Deep Neural Networks
 date: 2020-03-28 14:50:17
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, Neural Networks]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

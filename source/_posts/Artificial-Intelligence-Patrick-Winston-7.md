@@ -1,8 +1,8 @@
 ---
 title: Artificial Intelligence (7) · Learning · II
 date: 2020-01-03 06:43:33
-tags: [Artificial Intelligence]
-categories: [Open Course, Artificial Intelligence]
+tags: [Artificial Intelligence, Neural Networks]
+categories: [Computer Science, Artificial Intelligence]
 mathjax: true
 ---
 

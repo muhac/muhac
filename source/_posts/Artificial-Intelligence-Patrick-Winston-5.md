@@ -1,8 +1,8 @@
 ---
 title: Artificial Intelligence (5) · Constraints
 date: 2020-01-01 12:49:17
-tags: [Artificial Intelligence]
-categories: [Open Course, Artificial Intelligence]
+tags: [Artificial Intelligence, Search]
+categories: [Computer Science, Artificial Intelligence]
 mathjax: true
 ---
 

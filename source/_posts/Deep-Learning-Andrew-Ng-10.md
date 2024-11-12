@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (10) · Foundations of Convolutional Neural Networks
 date: 2020-04-04 14:42:43
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, CNN]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

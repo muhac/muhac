@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (16) · Sequence Models
 date: 2020-04-17 15:15:49
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, RNN]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

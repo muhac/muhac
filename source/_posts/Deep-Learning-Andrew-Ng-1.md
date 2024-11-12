@@ -2,7 +2,7 @@
 title: Deep Learning (1) · Introduction
 date: 2020-03-24 17:20:30
 tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

@@ -2,7 +2,7 @@
 title: Game Theory (1)
 date: 2020-08-22 23:33:08
 tags: [Economics, Game Theory]
-categories: [Open Course, Game Theory]
+categories: [Economics, Game Theory]
 mathjax: true
 ---
 

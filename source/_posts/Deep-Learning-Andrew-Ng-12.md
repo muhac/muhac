@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (12) · Object Detection
 date: 2020-04-06 15:50:21
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, CNN]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

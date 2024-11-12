@@ -1,8 +1,8 @@
 ---
 title: Machine Learning (6) · Applying Machine Learning
 date: 2020-12-20 16:45:07
-tags: [Artificial Intelligence, Machine Learning]
-categories: [Open Course, Machine Learning]
+tags: [Artificial Intelligence, Machine Learning, Optimization]
+categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 

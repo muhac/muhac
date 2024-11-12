@@ -1,8 +1,8 @@
 ---
 title: Machine Learning (9) · Anomaly Detection
 date: 2021-02-01 02:49:22
-tags: [Artificial Intelligence, Machine Learning]
-categories: [Open Course, Machine Learning]
+tags: [Artificial Intelligence, Machine Learning, Anomaly Detection]
+categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 
@@ -153,4 +153,3 @@ where $\Sigma = \begin{bmatrix} \begin{matrix} \sigma_1^2 & \\ & \sigma_2^2 \end
 | Manually create features to capture anomalies where $x_1,\,x_2$ take unusual combinations of values. | Automatically captures correlations between features.        |
 | Computationally cheaper. (scales better to large $n$)        | Computationally more expensive.                              |
 | OK even if training set size $m$ is small.                   | Must have $m\gt n$, or else $\Sigma$ is non-invertible.      |
-

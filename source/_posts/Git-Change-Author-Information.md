@@ -2,7 +2,7 @@
 title: Git · Change Author Information
 date: 2019-11-21 13:18:00
 tags: [Git, GitHub]
-categories: [Programming, Git]
+categories: [Software Engineering, Git]
 ---
 
 Before running this script, you'll need:

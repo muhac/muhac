@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (13) · Special Applications
 date: 2020-04-10 08:29:57
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, CNN]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

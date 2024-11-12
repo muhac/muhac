@@ -16,9 +16,6 @@ date: 2021-01-29 02:32:46
 <div id="info">
     <span style="font-size: 200%; cursor: default;">Muhan Li</span><br>
     <span style="position: relative; top: -15px;"><a href="mailto:limuhan@msn.com" target="_blank" rel="noreferrer noopener">limuhan@msn.com</a></span>
-    <p style="font-size: 75%; cursor:default;">
-    Checkout <a href="https://muhan.li" target="_blank" rel="noreferrer noopener">my homepage</a> for more information.
-    </p>
 </div>
 
 <!-- Calendly inline widget begin -->

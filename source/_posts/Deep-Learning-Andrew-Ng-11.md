@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (11) · Deep Convolutional Models
 date: 2020-04-05 00:14:07
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, CNN]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

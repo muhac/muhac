@@ -1,8 +1,8 @@
 ---
 title: Home Lab (2) · OPNsense and High Availability
 date: 2022-11-27 01:26:03
-tags: [Home Lab, Router, DNS, OPNsense, RouterOS, OpenWrt]
-categories: [Self Hosted, Home Lab]
+tags: [Home Lab, Router]
+categories: [Software Engineering, Home Lab]
 ---
 
 # 前言
@@ -86,3 +86,5 @@ LAN 口的话, IPv4选静态 IP, IPv6 选跟踪上游就行, 其他的配置可�
 TBD
 
 # 高可用
+
+TBW

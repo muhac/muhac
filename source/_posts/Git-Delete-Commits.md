@@ -2,7 +2,7 @@
 title: Git · Delete Commits
 date: 2021-05-01 22:38:00
 tags: [Git, GitHub]
-categories: [Programming, Git]
+categories: [Software Engineering, Git]
 ---
 
 **Removing an entire commit**
@@ -58,4 +58,3 @@ If you already pushed it, you will need to do a force push to get rid of it.
 ```shell
 git push origin HEAD --force
 ```
-

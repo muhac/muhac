@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (15) · Natural Language Processing
 date: 2020-04-16 12:58:37
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, RNN]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

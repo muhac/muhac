@@ -1,8 +1,8 @@
 ---
 title: Machine Learning (3) · Logistic Regression
 date: 2020-07-28 02:43:20
-tags: [Artificial Intelligence, Machine Learning]
-categories: [Open Course, Machine Learning]
+tags: [Artificial Intelligence, Machine Learning, Linear Regression]
+categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 
@@ -135,4 +135,3 @@ $\begin{aligned} J\left(\theta\right) = - \dfrac{1}{m} \sum_{i=1}^{m} \left[ y^\
 **Gradient Descent**
 
 $\begin{aligned} & \min _{\theta}J\left(\theta\right),\ \textsf{repeat:} \\ & \qquad \begin{aligned} \theta_0 := {}& \theta_0 - \alpha \cdot \dfrac{1}{m} \sum_{i=1}^{m} \left( h_\theta\left( x^\left(i\right) \right) - y^\left(i\right) \right) x_0 ^\left(i\right) & \qquad j &= 0 \\ \theta_j := {}& \theta_j - \alpha \left[ \dfrac{1}{m} \sum_{i=1}^{m} \left( h_\theta\left( x^\left(i\right) \right) - y^\left(i\right) \right) x_j ^\left(i\right) + \dfrac{\lambda}{m} \, \theta_j \right] & \qquad j &= 1,\,2,\,\dots \end{aligned} \end{aligned}$
-

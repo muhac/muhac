@@ -1,8 +1,8 @@
 ---
 title: Machine Learning (2) · Linear Regression · II
 date: 2020-04-21 00:13:20
-tags: [Artificial Intelligence, Machine Learning]
-categories: [Open Course, Machine Learning]
+tags: [Artificial Intelligence, Machine Learning, Linear Regression]
+categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 

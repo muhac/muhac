@@ -1,8 +1,8 @@
 ---
 title: Artificial Intelligence (6) · Learning · I
 date: 2020-01-02 14:33:30
-tags: [Artificial Intelligence]
-categories: [Open Course, Artificial Intelligence]
+tags: [Artificial Intelligence, Decision Tree]
+categories: [Computer Science, Artificial Intelligence]
 mathjax: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Artificial Intelligence (4) · Search · II
 date: 2019-11-17 03:44:19
-tags: [Artificial Intelligence]
-categories: [Open Course, Artificial Intelligence]
+tags: [Artificial Intelligence, Search]
+categories: [Computer Science, Artificial Intelligence]
 mathjax: true
 ---
 

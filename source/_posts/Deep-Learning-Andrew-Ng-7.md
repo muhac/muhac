@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (7) · Hyperparameter Tuning
 date: 2020-04-02 13:33:34
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, Optimization]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

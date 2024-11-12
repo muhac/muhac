@@ -1,8 +1,8 @@
 ---
 title: Machine Learning (4) · Neural Networks · I
 date: 2020-11-17 04:19:24
-tags: [Artificial Intelligence, Machine Learning]
-categories: [Open Course, Machine Learning]
+tags: [Artificial Intelligence, Machine Learning, Neural Networks]
+categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 

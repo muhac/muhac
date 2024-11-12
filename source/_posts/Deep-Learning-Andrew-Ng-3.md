@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (3) · Shallow Neural Networks
 date: 2020-03-27 11:52:56
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, Neural Networks]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

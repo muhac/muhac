@@ -1,8 +1,8 @@
 ---
 title: Artificial Intelligence (2) · Reasoning
 date: 2019-11-16 00:30:42
-tags: [Artificial Intelligence]
-categories: [Open Course, Artificial Intelligence]
+tags: [Artificial Intelligence, Expert System]
+categories: [Computer Science, Artificial Intelligence]
 ---
 
 ### 课程信息

@@ -1,8 +1,8 @@
 ---
 title: Python · Anaconda Tutorial
 date: 2020-01-16 00:01:48
-tags: [Anaconda, Python]
-categories: [Programming, Python]
+tags: [Python, Anaconda, Conda]
+categories: [Software Engineering, Python]
 ---
 
 这里只列出了部分基础操作命令。

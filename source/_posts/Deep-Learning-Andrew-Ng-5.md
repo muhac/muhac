@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (5) · Practical Aspects of Deep Learning
 date: 2020-03-29 03:21:50
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, Optimization]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

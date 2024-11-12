@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (14) · Recurrent Neural Networks
 date: 2020-04-11 17:15:42
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, RNN]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

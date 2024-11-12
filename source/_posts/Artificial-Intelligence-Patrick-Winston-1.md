@@ -2,7 +2,7 @@
 title: Artificial Intelligence (1) · Introduction
 date: 2019-11-15 00:44:09
 tags: [Artificial Intelligence]
-categories: [Open Course, Artificial Intelligence]
+categories: [Computer Science, Artificial Intelligence]
 ---
 
 ### 课程信息

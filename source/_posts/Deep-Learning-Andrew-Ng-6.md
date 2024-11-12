@@ -1,8 +1,8 @@
 ---
 title: Deep Learning (6) · Optimization Algorithms
 date: 2020-03-30 17:25:25
-tags: [Artificial Intelligence, Deep Learning]
-categories: [Open Course, Deep Learning]
+tags: [Artificial Intelligence, Deep Learning, Optimization]
+categories: [Computer Science, Deep Learning]
 mathjax: true
 ---
 

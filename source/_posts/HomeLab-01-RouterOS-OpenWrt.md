@@ -1,8 +1,8 @@
 ---
 title: Home Lab (1) · RouterOS, OpenWrt and PiHole
 date: 2022-08-15 23:05:11
-tags: [Home Lab, Router, DNS, GFW, RouterOS, OpenWrt, PiHole]
-categories: [Self Hosted, Home Lab]
+tags: [Home Lab, Router]
+categories: [Software Engineering, Home Lab]
 ---
 
 因为实在受不了 [pfSense](https://www.pfsense.org/) 开机太慢而且 WebUI 巨卡<sup> [1] </sup>, 和一些 DNS 设置奇奇怪怪的问题, 终于下定决心把主路由给换了. 调研使用了一波以后, 发现还是 [RouterOS](https://mikrotik.com/download) 可以比较相对**简单**地实现需求 (well, ROS 以复杂出名.. but<sup> [2] </sup>), 那正好开坑写一个系列, 重组内网服务器.
@@ -200,4 +200,3 @@ ROS 也有非常好用的 DNS 缓存功能, 但是在墙内走 UDP 协议总有�
 ```ros
 /system script run fullcone_nat_script
 ```
-

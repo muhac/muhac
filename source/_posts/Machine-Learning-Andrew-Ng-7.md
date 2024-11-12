@@ -1,8 +1,8 @@
 ---
 title: Machine Learning (7) · Support Vector Machines
 date: 2020-12-23 06:37:46
-tags: [Artificial Intelligence, Machine Learning]
-categories: [Open Course, Machine Learning]
+tags: [Artificial Intelligence, Machine Learning, SVM]
+categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 

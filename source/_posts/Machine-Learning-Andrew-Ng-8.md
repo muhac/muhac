@@ -1,8 +1,8 @@
 ---
 title: Machine Learning (8) · Unsupervised Learning
 date: 2021-01-21 08:47:46
-tags: [Artificial Intelligence, Machine Learning]
-categories: [Open Course, Machine Learning]
+tags: [Artificial Intelligence, Machine Learning, Unsupervised Learning]
+categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 
@@ -154,4 +154,3 @@ $\begin{matrix} x^\left(1\right) ,\, x^\left(1\right) ,\,\dots,\, x^\left(1\righ
 - Misuses
   - Use PCA to provent overfitting is not recommended
   - Try original/raw data before implementing PCA
-
