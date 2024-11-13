@@ -40,9 +40,9 @@ $Y = \left[ \begin{matrix} y^{\left(1\right)} & y^{\left(2\right)} & y^{\left(3\
 
 #### Logistic Regression
 
-Given $x\in\mathbb{R}^{n_x}$, want $\hat{y} = P\left(y=1\ |\ x\right)$.<br>
-***Parameters:*** $w\in\mathbb{R}^{n_x},\ b\in\mathbb{R}^{n_x}$<br>
-***Output:*** $\hat{y}= \sigma\left( w^{\mathsf{T}}x+b \right) \qquad 0\leq\hat{y}\leq1$<br>
+Given $x\in\mathbb{R}^{n_x}$, want $\hat{y} = P\left(y=1\ |\ x\right)$.  
+***Parameters:*** $w\in\mathbb{R}^{n_x},\ b\in\mathbb{R}^{n_x}$  
+***Output:*** $\hat{y}= \sigma\left( w^{\mathsf{T}}x+b \right) \qquad 0\leq\hat{y}\leq1$  
 &emsp;&emsp;&emsp;&emsp;$\sigma\left( z \right)={\rm sigmoid}\left(z\right) = \dfrac{1} {1 + e^{-z}}$
 
 ![sigmoid](Deep-Learning-Andrew-Ng-2/sigmoid.png)
@@ -51,7 +51,7 @@ Given $x\in\mathbb{R}^{n_x}$, want $\hat{y} = P\left(y=1\ |\ x\right)$.<br>
 
 Given $\left\{ \left(x^{\left(1\right)},\ y^{\left(1\right)}\right),\  \left(x^{\left(2\right)},\ y^{\left(2\right)}\right),\ \dots ,\  \left(x^{\left(m\right)},\ y^{\left(m\right)}\right) \right\}$, want $\hat{y}^{\left(i\right)}=y^{\left(i\right)}$.
 
-***Loss (error) function:*** $L\left(\hat{y},\,y\right)=-\left( y\log\hat{y} +\left(1-y\right) \log\left(1-\hat{y}\right) \right)$<br>
+***Loss (error) function:*** $L\left(\hat{y},\,y\right)=-\left( y\log\hat{y} +\left(1-y\right) \log\left(1-\hat{y}\right) \right)$  
 &emsp;&emsp;&emsp;&emsp;*Notice:* $L\left(\hat{y},\,y\right) = \dfrac{1}{2}\left(\hat{y}-y\right)^2$ makes optimization problem **non-convex.**
 
 ***Cost function:*** $\begin{aligned}J\left(w,\,b\right)= \dfrac{1}{m} \sum_{i=1}^{m} L\left(\hat{y}^{\left(i\right)},\,y^{\left(i\right)}\right)= -\dfrac{1}{m} \sum_{i=1}^{m} \left( y^{\left(i\right)}\log\hat{y}^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1-\hat{y}^{\left(i\right)}\right) \right)\end{aligned}$
@@ -94,12 +94,12 @@ $\begin{aligned} J\left(w,\,b\right) &= \dfrac{1}{m} \sum_{i=1}^{m} L\left(a^{\l
 
 $J=0; \ dw_1=0; \ dw_2=0; \ db=0$
 
-For $i=1$ to $m$<br>
-&emsp;&emsp;$z^{\left(i\right)} = w^{\mathsf{T}} x^{\left(i\right)} +b$<br>
-&emsp;&emsp;$a^{\left(i\right)} = \sigma \left( x^{\left(i\right)} \right)$<br>
-&emsp;&emsp;$J +\\!\\!= - \left[ y^{\left(i\right)}\log a^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1- a^{\left(i\right)}\right) \right]$<br>
-&emsp;&emsp;$dz^{\left(i\right)} = a^{\left(i\right)} - y^{\left(i\right)}$<br>
-&emsp;&emsp;$dw_1 +\\!\\!= x_1^{\left(i\right)} dz^{\left(i\right)}$<br>
+For $i=1$ to $m$  
+&emsp;&emsp;$z^{\left(i\right)} = w^{\mathsf{T}} x^{\left(i\right)} +b$  
+&emsp;&emsp;$a^{\left(i\right)} = \sigma \left( x^{\left(i\right)} \right)$  
+&emsp;&emsp;$J +\\!\\!= - \left[ y^{\left(i\right)}\log a^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1- a^{\left(i\right)}\right) \right]$  
+&emsp;&emsp;$dz^{\left(i\right)} = a^{\left(i\right)} - y^{\left(i\right)}$  
+&emsp;&emsp;$dw_1 +\\!\\!= x_1^{\left(i\right)} dz^{\left(i\right)}$  
 &emsp;&emsp;$dw_2 +\\!\\!= x_2^{\left(i\right)} dz^{\left(i\right)}$&emsp;&emsp;&emsp;&emsp;*( n = 2 )*
 &emsp;&emsp;$db +\\!\\!= dz^{\left(i\right)}$
 
@@ -140,12 +140,12 @@ z = np.dot(w, x) + b
 
 $J=0; \ dw=\texttt{np.zeros}\left(n_x, 1\right); \ db=0$
 
-For $i=1$ to $m$<br>
-&emsp;&emsp;$z^{\left(i\right)} = w^{\mathsf{T}} x^{\left(i\right)} +b$<br>
-&emsp;&emsp;$a^{\left(i\right)} = \sigma \left( x^{\left(i\right)} \right)$<br>
-&emsp;&emsp;$J +\\!\\!= - \left[ y^{\left(i\right)}\log a^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1- a^{\left(i\right)}\right) \right]$<br>
-&emsp;&emsp;$dz^{\left(i\right)} = a^{\left(i\right)} - y^{\left(i\right)}$<br>
-&emsp;&emsp;$dw +\\!\\!= x^{\left(i\right)} dz^{\left(i\right)}$<br>
+For $i=1$ to $m$  
+&emsp;&emsp;$z^{\left(i\right)} = w^{\mathsf{T}} x^{\left(i\right)} +b$  
+&emsp;&emsp;$a^{\left(i\right)} = \sigma \left( x^{\left(i\right)} \right)$  
+&emsp;&emsp;$J +\\!\\!= - \left[ y^{\left(i\right)}\log a^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1- a^{\left(i\right)}\right) \right]$  
+&emsp;&emsp;$dz^{\left(i\right)} = a^{\left(i\right)} - y^{\left(i\right)}$  
+&emsp;&emsp;$dw +\\!\\!= x^{\left(i\right)} dz^{\left(i\right)}$  
 &emsp;&emsp;$db +\\!\\!= dz^{\left(i\right)}$
 
 $J /\\!\\!= m; \ db/\\!\\!= m$

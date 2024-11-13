@@ -12,19 +12,14 @@ MIT OPEN COURSE WARE
 6.034, Fall 2010, **Artificial Intelligence,** *Patrick H. Winston*  
 [Youtube](https://www.youtube.com/watch?v=TjZBTDzGeGg&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi) / [Bilibili](https://www.bilibili.com/video/av75097245)
 
-<br>
-
 本节内容：约束（线条图、地图着色、物体识别）
 
 <!--
-<br>
 
 > 期末考试加拖延症，没想到直接拖更到 2020 年了 OTZ 强迫更新一波，本来准备是趁热打铁现在直接变成二刷了 2333
 -->
 
 <!-- more -->
-
-<br>
 
 ### 第七讲 解释线条图
 
@@ -33,8 +28,6 @@ MIT OPEN COURSE WARE
 **ABDUCTION:** THREE FACED VERTEXES --> ARROW / FORK
 
 ![Guzman](Artificial-Intelligence-Patrick-Winston-5/1.jpg)
-
-<br>
 
 #### Huffman 的工作
 
@@ -55,8 +48,6 @@ MIT OPEN COURSE WARE
 
 ![Huffman](Artificial-Intelligence-Patrick-Winston-5/4.jpg)
 
-<br>
-
 #### Waltz 的工作
 
 **Waltz's Label**
@@ -69,8 +60,6 @@ MIT OPEN COURSE WARE
 **Waltz's Algorithm**
 
 ![Waltz](Artificial-Intelligence-Patrick-Winston-5/5.jpg)
-
-<br>
 
 ### 第八讲 搜索、域缩减
 
@@ -98,7 +87,7 @@ FOR EACH DFS ASSIGNMENT
           BACKUP
 ```
 
-***<br>CONSIDERED***
+***CONSIDERED***
 
 - ~~NOTHING~~
 - ASSIGNMENT
@@ -111,13 +100,9 @@ FOR EACH DFS ASSIGNMENT
 
 **\+ 可以使用两边夹逼的方法快速确定一个狭小的范围**
 
-<br>
-
 类似的问题还有：
 
 ![flight](Artificial-Intelligence-Patrick-Winston-5/7.jpg)
-
-<br>
 
 ### 第九讲 视觉对象识别
 
@@ -129,13 +114,9 @@ FOR EACH DFS ASSIGNMENT
 4. Generalized Cylinders
 5. Recognition
 
-<br>
-
 #### Ullman's ALIGNMENT THEORY
 
 ![AT](Artificial-Intelligence-Patrick-Winston-5/8.jpg)
-
-<br>
 
 #### Ullman's INTERMEDIATE FEATURES THEORY
 

@@ -8,7 +8,7 @@ mathjax: true
 
 Deep Learning Specialization, Course B
 **Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization**
-by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 2:*** *Optimization Algorithms*
 
@@ -38,7 +38,7 @@ $Y_{1 \times m} = \left[ \underbrace{ \overbrace{ \begin{matrix} y^{\left(1\righ
 
   &emsp;&emsp;compute cost function J
 
-  &emsp;&emsp;$\qquad \begin{aligned} J^{\left\{t\right\}} = \dfrac{1}{1000} \sum_{i=1}^{m} L & \left( \hat{y} ^\left(i\right),\, y^\left(i\right) \right) + \dfrac{\lambda}{2\cdot1000} \sum_{l=1}^{L} \left|\left| W^{\left[l\right]} \right| \right| ^2_F \end{aligned}$
+  &emsp;&emsp;$\qquad \begin{aligned} J^{\left\{t\right\}} = \dfrac{1}{1000} \sum_{i=1}^{m} L & \left( \hat{y} ^{\left(i\right)},\, y^{\left(i\right)} \right) + \dfrac{\lambda}{2\cdot1000} \sum_{l=1}^{L} \left|\left| W^{\left[l\right]} \right| \right| ^2_F \end{aligned}$
 
   &emsp;&emsp;back prop to compute gradients of J<sup>{t}</sup> and update weights
 
@@ -46,11 +46,11 @@ $Y_{1 \times m} = \left[ \underbrace{ \overbrace{ \begin{matrix} y^{\left(1\righ
 
   $\rightarrow$ ***1 epoch***
 
-  ![epoch](\Deep-Learning-Andrew-Ng-6/e.png)
+  ![epoch](Deep-Learning-Andrew-Ng-6/e.png)
 
 #### Understanding Mini-Batch Gradient Descent
 
-![c](\Deep-Learning-Andrew-Ng-6/c.png)
+![c](Deep-Learning-Andrew-Ng-6/c.png)
 
 - *if mini-batch* ***size = m:*** batch gradient decent
   - (X<sup>{1}</sup>, Y<sup>{1}</sup>) = (X, Y) → too long per iteration
@@ -60,7 +60,7 @@ $Y_{1 \times m} = \left[ \underbrace{ \overbrace{ \begin{matrix} y^{\left(1\righ
   - vectorization
   - make progress without entire training set
 
-![1-m](\Deep-Learning-Andrew-Ng-6/m.png)
+![1-m](Deep-Learning-Andrew-Ng-6/m.png)
 
 - ***small training set*** *(2000):* use batch gradient descent
 - ***typical mini-batch size:*** 64, 128, 256, 512
@@ -70,7 +70,7 @@ $Y_{1 \times m} = \left[ \underbrace{ \overbrace{ \begin{matrix} y^{\left(1\righ
 
 $\begin{aligned} V_0 &= 0 \\ V_1 &= 0.9V_0 + 0.1 \theta_1 \\ V_2 &= 0.9V_1 + 0.1 \theta_2 \\ &\vdots \\ V_n &= 0.9V_{n-1} + 0.1 \theta_n \end{aligned}$
 
-![t](\Deep-Learning-Andrew-Ng-6/t.png)
+![t](Deep-Learning-Andrew-Ng-6/t.png)
 
 $V_t = \beta V_{t-1} + \left( 1-\beta \right) \theta_t$
 
@@ -104,7 +104,7 @@ on iteration t:
 
 &emsp;&emsp;$W:=W-\alpha V_{dW}, \quad b:=b-\alpha V_{db}$
 
-![momentum](\Deep-Learning-Andrew-Ng-6/md.png)
+![momentum](Deep-Learning-Andrew-Ng-6/md.png)
 
 #### Root Mean Square Prop (RMSProp)
 
@@ -159,11 +159,11 @@ $\alpha = f_\textsf{discrete staircase}$
 
 **Saddle Point**
 
-![Local Optima](\Deep-Learning-Andrew-Ng-6/z.png)
+![Local Optima](Deep-Learning-Andrew-Ng-6/z.png)
 
-##### Plateaus √
+##### Plateaus $√$
 
-![Plateau](\Deep-Learning-Andrew-Ng-6/p.png)
+![Plateau](Deep-Learning-Andrew-Ng-6/p.png)
 
 - unlikely to get stuck in a bad local optima
 - plateaus can make learning slow
@@ -172,6 +172,6 @@ $\alpha = f_\textsf{discrete staircase}$
 
 #### Optimization
 
-![optimization](\Deep-Learning-Andrew-Ng-6/3.png)
+![optimization](Deep-Learning-Andrew-Ng-6/3.png)
 
 <a href='https://github.com/muhac/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

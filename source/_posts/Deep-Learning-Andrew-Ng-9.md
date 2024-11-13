@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course C
-**Structuring Machine Learning Projects** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Structuring Machine Learning Projects** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 2:*** *ML Strategy (2)*
 

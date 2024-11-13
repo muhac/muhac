@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course A
-**Neural Networks and Deep Learning** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Neural Networks and Deep Learning** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 4:*** *Deep Neural Networks*
 
@@ -72,18 +72,18 @@ $\left. \begin{aligned} \overbrace{ z^{\left[1\right]} }^{n^{\left[1\right]} \ti
 - input a<sup>[l-1]</sup>
 - output a<sup>[l]</sup>, cache z<sup>[l]</sup>, (W<sup>[l]</sup>, b<sup>[l]</sup>)
 
-$\begin{array}{lc|cl} {}^\textsf{Forward Propagation} & & & \textsf{vectorized}_\strut \\ {\begin{cases}\begin{aligned} z^\left[l\right] &= W^\left[l\right] a^\left[l-1\right] + b^\left[l\right] \\ a^\left[l\right] &= g^\left[l\right] \left(z^\left[l\right] \right) \end{aligned}\end{cases}} & & & {\begin{cases}\begin{aligned} Z^\left[l\right] &= W^\left[l\right] A^\left[l-1\right] + b^\left[l\right] \\ A^\left[l\right] &= g^\left[l\right] \left(Z^\left[l\right] \right)\end{aligned}\end{cases}} \end{array}$
+$\begin{array}{lc|cl} {}^\textsf{Forward Propagation} & & & \textsf{vectorized}_\strut \\ {\begin{cases}\begin{aligned} z^{\left[l\right]} &= W^{\left[l\right]} a^{\left[l-1\right]} + b^{\left[l\right]} \\ a^{\left[l\right]} &= g^{\left[l\right]} \left(z^{\left[l\right]} \right) \end{aligned}\end{cases}} & & & {\begin{cases}\begin{aligned} Z^{\left[l\right]} &= W^{\left[l\right]} A^{\left[l-1\right]} + b^{\left[l\right]} \\ A^{\left[l\right]} &= g^{\left[l\right]} \left(Z^{\left[l\right]} \right)\end{aligned}\end{cases}} \end{array}$
 
 ##### Backward Propagation
 
 - input da<sup>[l]</sup>
 - output da<sup>[l-1]</sup>, dW<sup>[l]</sup>, db<sup>[l]</sup>)
 
-$\begin{array}{lc|cl} {}^\textsf{Backward Propagation} & & & \textsf{vectorized}_\strut \\ {\begin{cases}\begin{aligned} dz^\left[l\right] &= da^\left[l\right] \odot {g^\left[l\right]}' \left(z^\left[l\right] \right) \\ dW^\left[l\right] &= dz^\left[l\right] { a^\left[l-1\right] }^{\mathsf{T}} \\ db^\left[l\right] &= dz^\left[l\right] \\ da^\left[l-1\right] &= { W^\left[l\right] }^{\mathsf{T}} dz^\left[l\right] \end{aligned}\end{cases}} & & & {\begin{cases}\begin{aligned} dZ^\left[l\right] &= dA^\left[l\right] \odot {g^\left[l\right]}' \left(Z^\left[l\right] \right) \\ dW^\left[l\right] &= \dfrac{1}{m} dZ^\left[l\right] { A^\left[l-1\right] }^{\mathsf{T}} \\ db^\left[l\right] &= \dfrac{1}{m} \texttt{np.sum(} dZ^\left[l\right] \texttt{, axis=1, keepdims=True)} \\ dA^\left[l-1\right] &= { W^\left[l\right] }^{\mathsf{T}} dZ^\left[l\right] \end{aligned}\end{cases}} \end{array}$
+$\begin{array}{lc|cl} {}^\textsf{Backward Propagation} & & & \textsf{vectorized}_\strut \\ {\begin{cases}\begin{aligned} dz^{\left[l\right]} &= da^{\left[l\right]} \odot {g^{\left[l\right]}}' \left(z^{\left[l\right]} \right) \\ dW^{\left[l\right]} &= dz^{\left[l\right]} { a^{\left[l-1\right]} }^{\mathsf{T}} \\ db^{\left[l\right]} &= dz^{\left[l\right]} \\ da^{\left[l-1\right]} &= { W^{\left[l\right]} }^{\mathsf{T}} dz^{\left[l\right]} \end{aligned}\end{cases}} & & & {\begin{cases}\begin{aligned} dZ^{\left[l\right]} &= dA^{\left[l\right]} \odot {g^{\left[l\right]}}' \left(Z^{\left[l\right]} \right) \\ dW^{\left[l\right]} &= \dfrac{1}{m} dZ^{\left[l\right]} { A^{\left[l-1\right]} }^{\mathsf{T}} \\ db^{\left[l\right]} &= \dfrac{1}{m} \texttt{np.sum(} dZ^{\left[l\right]} \texttt{, axis=1, keepdims=True)} \\ dA^{\left[l-1\right]} &= { W^{\left[l\right]} }^{\mathsf{T}} dZ^{\left[l\right]} \end{aligned}\end{cases}} \end{array}$
 
 **initialize**
 
-$\begin{aligned} a^\left[0\right] &= x \qquad & A^\left[0\right] &= X \\ da^\left[L\right] &= - \dfrac{y}{a} + \dfrac{1-y}{1-a} \qquad & dA^\left[L\right] &= \sum_{i=1}^{m} \left(- \dfrac{y ^\left(i\right)}{a ^\left(i\right)} + \dfrac{1-y ^\left(i\right)}{1-a ^\left(i\right)}\right) \end{aligned}$
+$\begin{aligned} a^{\left[0\right]} &= x \qquad & A^{\left[0\right]} &= X \\ da^{\left[L\right]} &= - \dfrac{y}{a} + \dfrac{1-y}{1-a} \qquad & dA^{\left[L\right]} &= \sum_{i=1}^{m} \left(- \dfrac{y ^{\left(i\right)}}{a ^{\left(i\right)}} + \dfrac{1-y ^{\left(i\right)}}{1-a ^{\left(i\right)}}\right) \end{aligned}$
 
 #### Parameters vs Hyperparameters
 

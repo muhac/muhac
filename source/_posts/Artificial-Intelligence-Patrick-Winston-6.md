@@ -12,13 +12,9 @@ MIT OPEN COURSE WARE
 6.034, Fall 2010, **Artificial Intelligence,** *Patrick H. Winston*  
 [Youtube](https://www.youtube.com/watch?v=TjZBTDzGeGg&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi) / [Bilibili](https://www.bilibili.com/video/av75097245)
 
-<br>
-
 本节内容：最近邻、识别树
 
 <!-- more -->
-
-<br>
 
 ### 第十讲 最近邻
 
@@ -32,11 +28,68 @@ MIT OPEN COURSE WARE
    - One Shot
    - Explanation Based Learning
 
-<br>
-
 #### NEAREST NEIGHBOR BASED LEARNING
 
-![Nearest Neighbor](Artificial-Intelligence-Patrick-Winston-6/knn.png)
+<svg viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
+   <!-- 矩形节点 -->
+   <rect x="20" y="100"
+         width="100" height="60" rx="5"
+         fill="transparent" stroke="black"/>
+   <text x="70" y="130"
+         text-anchor="middle"
+         dominant-baseline="middle">
+      INPUT
+   </text>
+
+   <!-- 箭头连接线 -->
+   <path d="M 120,130 L 190,130" stroke="black" fill="none"/>
+    
+   <rect x="190" y="100"
+         width="150" height="60" rx="5"
+         fill="transparent" stroke="black"/>
+   <text x="265" y="120"
+         text-anchor="middle"
+         dominant-baseline="middle">
+      <tspan x="265" dy="0">FEATURE</tspan>
+      <tspan x="265" dy="20">GENERATOR</tspan>
+   </text>
+
+   <!-- 箭头连接线 -->
+   <path d="M 340,130 L 410,130" stroke="black" fill="none"/>
+    
+   <rect x="410" y="100"
+         width="150" height="60" rx="5"
+         fill="transparent" stroke="black"/>
+   <text x="485" y="130"
+         text-anchor="middle"
+         dominant-baseline="middle">
+      COMPARATOR
+   </text>
+
+   <!-- 箭头连接线 -->
+   <path d="M 560,130 L 630,130" stroke="black" fill="none"/>
+
+   <rect x="630" y="100"
+         width="150" height="60" rx="5"
+         fill="transparent" stroke="black"/>
+   <text x="705" y="130"
+         text-anchor="middle"
+         dominant-baseline="middle">
+      RECOGNITION
+   </text>
+
+   <!-- 箭头连接线 -->
+   <path d="M 485,60 L 485,100" stroke="black" fill="none"/>
+
+   <rect x="410" y="20"
+         width="150" height="40" rx="5"
+         fill="transparent" stroke="black"/>
+   <text x="485" y="40"
+         text-anchor="middle"
+         dominant-baseline="middle">
+      LIBRARY
+   </text>
+</svg>
 
 ##### 插座分类的例子
 
@@ -63,8 +116,6 @@ Find the closest match in the 'childhood' table:
 
 - **INDEPENDENCE**
   confusion of correlation with cause
-
-<br>
 
 ### 第十一讲 识别树
 
@@ -107,8 +158,6 @@ Find the closest match in the 'childhood' table:
 
 ![Test 2](Artificial-Intelligence-Patrick-Winston-6/idt.jpg)
 
-<br>
-
 ##### LARGE DATASET
 
 ###### <span style="font-size:110%;">Measuring DISORDER of tests</span>
@@ -135,13 +184,9 @@ NUMERICAL --> ***threshold*** --> *binary test*
 
 NUMBER OF TESTS = NUMBER OF SAMPLES - 1
 
-<br>
-
 #### NN 与 ID Tree 的比较
 
 ![](Artificial-Intelligence-Patrick-Winston-6/c.jpg)
-
-<br>
 
 #### Convert tree into a set of rules
 
@@ -166,8 +211,6 @@ THEN -
 IF GARLIC = Y THEN -
 ```
 
-<br>
-
 {% cq %}
 
 **The Precedent Principle**
@@ -177,5 +220,3 @@ If something is similar in some respects, it is likely to be similar in other re
 The simplest explanation is often the best explanation.
 
 {% endcq %}
-
-<br>

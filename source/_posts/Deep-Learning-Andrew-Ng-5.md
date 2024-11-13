@@ -8,7 +8,7 @@ mathjax: true
 
 Deep Learning Specialization, Course B
 **Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization**
-by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 1:*** *Practical Aspects of Deep Learning*
 
@@ -28,7 +28,11 @@ by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/
 
 learning rate, \# iterations, \# hidden units, activation function, ...
 
-![set](Deep-Learning-Andrew-Ng-5/tdt.png)
+{% mermaid pie %}
+"train set" : 60
+"dev set" : 20
+"test set" : 20
+{% endmermaid %}
 
 **Size**
 
@@ -64,17 +68,17 @@ learning rate, \# iterations, \# hidden units, activation function, ...
 
 $\min_{w,b}J\left(w,b\right) \qquad w \in \mathbb{R}^{n_x}, \ b \in \mathbb{R}$
 
-$\begin{aligned} J\left(w,b\right) = \dfrac{1}{m} \sum_{i=1}^{m} L\left( \hat{y} ^\left(i\right),\, y^\left(i\right) \right) &+ \dfrac{\lambda}{2m} \left|\left| w \right| \right| ^2 \quad \color{lightgray} { \overbrace{ + \dfrac{\lambda}{2m} b^2} ^{\rm omit} }\\ L_2 \textsf{ Regulariztion} \qquad \left|\left| w \right| \right| ^2 &= \sum_{j=1}^{n_x} w_j^2 = w^{\mathsf{T}} w \end{aligned}$
+$\begin{aligned} J\left(w,b\right) = \dfrac{1}{m} \sum_{i=1}^{m} L\left( \hat{y} ^{\left(i\right)},\, y^{\left(i\right)} \right) &+ \dfrac{\lambda}{2m} \left|\left| w \right| \right| ^2 \quad \color{lightgray} { \overbrace{ + \dfrac{\lambda}{2m} b^2} ^{\rm omit} }\\ L_2 \textsf{ Regulariztion} \qquad \left|\left| w \right| \right| ^2 &= \sum_{j=1}^{n_x} w_j^2 = w^{\mathsf{T}} w \end{aligned}$
 
 - ***λ:*** regularization parameter
 
 ##### Neural Network
 
-$\begin{aligned} J\left( W^{\left[1\right]},b^{\left[1\right]}, \dots,W^{\left[L\right]},b^{\left[L\right]}\right) = \dfrac{1}{m} \sum_{i=1}^{m} L & \left( \hat{y} ^\left(i\right),\, y^\left(i\right) \right) + \dfrac{\lambda}{2m} \sum_{l=1}^{L} \left|\left| W^{\left[l\right]} \right| \right| ^2_F \\ \textsf{ Frobenius norm} \qquad \left|\left| W ^{\left[ l \right]} \right| \right| ^2_F &= \sum_{i=1}^{n ^{\left[ l \right]}} \sum_{j=1}^{n ^{\left[ l-1 \right]}} \left( {w_{ij} ^{\left[ l \right]}} \right) ^2 \qquad W \in \mathbb{R}^{n^{\left[ L \right]} \times n^{\left[ L-1 \right]}} \end{aligned}$
+$\begin{aligned} J\left( W^{\left[1\right]},b^{\left[1\right]}, \dots,W^{\left[L\right]},b^{\left[L\right]}\right) = \dfrac{1}{m} \sum_{i=1}^{m} L & \left( \hat{y} ^{\left(i\right)},\, y^{\left(i\right)} \right) + \dfrac{\lambda}{2m} \sum_{l=1}^{L} \left|\left| W^{\left[l\right]} \right| \right| ^2_F \\ \textsf{ Frobenius norm} \qquad \left|\left| W ^{\left[ l \right]} \right| \right| ^2_F &= \sum_{i=1}^{n ^{\left[ l \right]}} \sum_{j=1}^{n ^{\left[ l-1 \right]}} \left( {w_{ij} ^{\left[ l \right]}} \right) ^2 \qquad W \in \mathbb{R}^{n^{\left[ L \right]} \times n^{\left[ L-1 \right]}} \end{aligned}$
 
 **Weight Decay**
 
-$\begin{aligned} dW^\left[l\right] &= \overbrace{\dfrac{1}{m} \, dZ^\left[l\right] { A^\left[l-1\right] }^{\mathsf{T}}} ^{\textsf{backpropagation}} + \dfrac{\lambda}{m} W^\left[l\right] \\ W^\left[l\right] &= W^\left[l\right] - \alpha\ dW^\left[l\right] = \underbrace{ \left(1 - \dfrac{\alpha \, \lambda}{m} \right) W^\left[l\right]} _{\textsf{weight decay}} - \alpha \left( {\dfrac{1}{m} \, dZ^\left[l\right] { A^\left[l-1\right] }^{\mathsf{T}}} \right) \end{aligned}$
+$\begin{aligned} dW^{\left[l\right]} &= \overbrace{\dfrac{1}{m} \, dZ^{\left[l\right]} { A^{\left[l-1\right]} }^{\mathsf{T}}} ^{\textsf{backpropagation}} + \dfrac{\lambda}{m} W^{\left[l\right]} \\ W^{\left[l\right]} &= W^{\left[l\right]} - \alpha\ dW^{\left[l\right]} = \underbrace{ \left(1 - \dfrac{\alpha \, \lambda}{m} \right) W^{\left[l\right]}} _{\textsf{weight decay}} - \alpha \left( {\dfrac{1}{m} \, dZ^{\left[l\right]} { A^{\left[l-1\right]} }^{\mathsf{T}}} \right) \end{aligned}$
 
 #### Why Regularization Reduces Overfitting?
 

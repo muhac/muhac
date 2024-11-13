@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course D
-**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 1:*** *Foundations of Convolutional Neural Networks*
 
@@ -148,10 +148,10 @@ use gradient descent (or momentum, ...) to optimize parameters to reduce J
 
 #### Convolutional Model: step by step
 
-![1](/Deep-Learning-Andrew-Ng-10/12.png)
+![1](Deep-Learning-Andrew-Ng-10/12.png)
 
 #### Convolutional Model: application
 
-![2](/Deep-Learning-Andrew-Ng-10/13.png)
+![2](Deep-Learning-Andrew-Ng-10/13.png)
 
 <a href='https://github.com/muhac/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

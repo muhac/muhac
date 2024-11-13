@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course A
-**Neural Networks and Deep Learning** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Neural Networks and Deep Learning** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 1:*** *Introduction to Deep Learning*
 
@@ -26,7 +26,50 @@ Deep Learning Specialization, Course A
 
 **ReLU,** Rectified Linear Unit Function: $\max\left(0,y\right)$
 
-![What is a neural network?](Deep-Learning-Andrew-Ng-1/1.png)
+```mermaid
+flowchart LR
+    %% Input variables
+    size("size")
+    bed("#35; bedrooms")
+    zip("zip code")
+    wealth("welth")
+    
+    %% Hidden layer nodes
+    h1((" "))
+    h2((" "))
+    h3((" "))
+    hh((" "))
+    
+    %% Output
+    price("price")
+    
+    %% Connections
+    size --> h1
+    bed --> h1
+    
+    zip --> h2
+    
+    zip --> h3
+    wealth --> h3
+    
+    h1 --- |"family size"| hh
+    h2 --- |"walkability"| hh
+    h3 --- |"school quality"| hh
+    
+    hh --> price
+
+    %% Group inputs and output
+    subgraph X
+        size
+        bed
+        zip
+        wealth
+    end
+    
+    subgraph Y
+        price
+    end
+```
 
 **Notice** that each of these hidden units in the neural network takes its inputs all four input features. ***(density connected)***
 

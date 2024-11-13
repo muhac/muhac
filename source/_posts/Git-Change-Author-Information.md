@@ -12,8 +12,6 @@ Before running this script, you'll need:
 
 <!-- more -->
 
-<br>
-
 ##### Create a fresh, bare clone of your repository
 
 ```shell

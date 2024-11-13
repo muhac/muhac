@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course D
-**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 3:*** *Object Detection*
 
@@ -107,6 +107,6 @@ $y = \left[\begin{matrix} p_c \\ b_x \\ b_y \\ b_h \\ b_w \\ c_1 \\ c_2 \\ c_3 \
 
 #### Car detection with YOLO
 
-![](/Deep-Learning-Andrew-Ng-12/8.png)
+![](Deep-Learning-Andrew-Ng-12/8.png)
 
 <a href='https://github.com/muhac/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

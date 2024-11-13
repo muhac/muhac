@@ -6,7 +6,7 @@ categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 
-Stanford University, **Machine Learning,** *Andrew Ng,* [Coursera]( https://www.coursera.org/learn/machine-learning/home/info )
+Stanford University, **Machine Learning,** *Andrew Ng,* [Coursera](https://www.coursera.org/learn/machine-learning/home/info)
 
 ***Week 1:*** Introduction, Linear Regression with One Variable
 
@@ -75,7 +75,7 @@ $\min _{\theta _{0},\theta _{1},...,\theta _{n}}J\left( \theta _{0},\theta _{1},
 
 ***"Batch" Gradient Decent:*** Each step uses all training examples
 
-$\begin{equation} \begin{aligned} \dfrac {\partial }{\partial \theta _{j}}J\left( \theta _{0},\theta _{1}\right) & = \dfrac {\partial }{\partial \theta _{j}} \dfrac {1}{2m} \sum ^{m}_{i=1}\left( h_{\theta }\left( x^{\left(i\right)}\right) -y^{\left(i\right)}\right) ^{2} \\& = \dfrac {\partial }{\partial \theta _{j}} \dfrac {1}{2m} \sum ^{m}_{i=1}\left( \theta _{0}+\theta _{1}x^{\left(i\right)} -y^{\left(i\right)}\right) ^{2} \end{aligned} \end{equation}$
+$\begin{aligned} \dfrac {\partial }{\partial \theta _{j}}J\left( \theta _{0},\theta _{1}\right) & = \dfrac {\partial }{\partial \theta _{j}} \dfrac {1}{2m} \sum ^{m}_{i=1}\left( h_{\theta }\left( x^{\left(i\right)}\right) -y^{\left(i\right)}\right) ^{2} \\& = \dfrac {\partial }{\partial \theta _{j}} \dfrac {1}{2m} \sum ^{m}_{i=1}\left( \theta _{0}+\theta _{1}x^{\left(i\right)} -y^{\left(i\right)}\right) ^{2} \end{aligned}$
 
 $\begin{aligned} \theta _{0}=\dfrac {\partial }{\partial \theta _{0}}J\left( \theta _{0},\theta _{1}\right) = \dfrac {1}{m} \sum ^{m}_{i=1}\left( h_{\theta }\left( x^{\left(i\right)}\right) -y^{\left(i\right)}\right) \end{aligned}$
 

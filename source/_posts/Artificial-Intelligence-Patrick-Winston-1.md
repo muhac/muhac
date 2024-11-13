@@ -11,12 +11,9 @@ MIT OPEN COURSE WARE
 6.034, Fall 2010, **Artificial Intelligence,** *Patrick H. Winston*  
 [Youtube](https://www.youtube.com/watch?v=TjZBTDzGeGg&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi) / [Bilibili](https://www.bilibili.com/video/av75097245)
 
-<br>
-
 本节内容：生成测试，状态图和状态空间
 
 <!--
-<br>
 
 ### 写作目的
 
@@ -24,8 +21,6 @@ MIT OPEN COURSE WARE
 -->
 
 <!-- more -->
-
-<br>
 
 ### 第一讲 概论
 
@@ -37,27 +32,25 @@ Representations that support
 Models targeted at  
 Thinking Perception Action
 
-<br>
-
 #### Generate and Test
 
 生成器：不冗余（重复），且能提供足够的信息以判断
-![Generate and Test](Artificial-Intelligence-Patrick-Winston-1/gt.png)
 
-<br>
+```mermaid
+flowchart LR
+  A[Generate] --> B[Test]
+  B --> C[Succeed]
+  B --> D[Fail]
+```
 
 #### 状态图和推理 (Reasoning)
 
 状态空间法（例：农夫过河问题）
 
-<br>
-
 #### 语言 (Language)
 
 1. 讲故事和理解故事
 2. 整理感官系统和指挥感官系统
-
-<br>
 
 {% cq %}
 
@@ -68,5 +61,3 @@ Once you have a name for something, you get power over it.
 Simple ideas are often the most powerful.
 
 {% endcq %}
-
-<br>

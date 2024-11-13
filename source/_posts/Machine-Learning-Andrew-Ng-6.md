@@ -6,7 +6,7 @@ categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 
-Stanford University, **Machine Learning,** *Andrew Ng,* [Coursera]( https://www.coursera.org/learn/machine-learning/home/info )
+Stanford University, **Machine Learning,** *Andrew Ng,* [Coursera](https://www.coursera.org/learn/machine-learning/home/info)
 
 ***Week 6:*** Advice for Applying Machine Learning, Machine Learning System Design
 
@@ -47,9 +47,9 @@ $\textsf{Dataset} \begin{cases} 60\% \textsf{ Training set} \\ 20\% \textsf{ Cro
 
 $\begin{matrix} \textsf{High Bias} & - & \textsf{just right} & - & \textsf{High Variance} \\ \textsf{underfit}&&&&\textsf{overfit} \end{matrix}$
 
-Training error: $\begin{aligned} J_{train}\left(\theta\right) = \dfrac{1}{2m}\sum_{i=1}^{m} \left( h_\theta \left( x^\left(i\right) \right) - y^\left(i\right) \right) ^2 \end{aligned}$
+Training error: $\begin{aligned} J_{train}\left(\theta\right) = \dfrac{1}{2m}\sum_{i=1}^{m} \left( h_\theta \left( x^{\left(i\right)} \right) - y^{\left(i\right)} \right) ^2 \end{aligned}$
 
-Validation error: $\begin{aligned} J_{cv}\left(\theta\right) = \dfrac{1}{2m_{cv}}\sum_{i=1}^{m_{cv}} \left( h_\theta \left( x_{cv}^\left(i\right) \right) - y_{cv}^\left(i\right) \right) ^2 \end{aligned}$ or $\begin{aligned} J_{test}\left(\theta\right) \end{aligned}$
+Validation error: $\begin{aligned} J_{cv}\left(\theta\right) = \dfrac{1}{2m_{cv}}\sum_{i=1}^{m_{cv}} \left( h_\theta \left( x_{cv}^{\left(i\right)} \right) - y_{cv}^{\left(i\right)} \right) ^2 \end{aligned}$ or $\begin{aligned} J_{test}\left(\theta\right) \end{aligned}$
 
 ![Bias vs Variance](Machine-Learning-Andrew-Ng-6/1.png)
 
@@ -60,13 +60,13 @@ Validation error: $\begin{aligned} J_{cv}\left(\theta\right) = \dfrac{1}{2m_{cv}
 
 **Linear regression with regularization**
 
-$\begin{aligned} \textsf{Model: } & h_\theta \left(x\right) = \theta_0 + \theta_1x + \theta_2x^2 + \theta_3x^3 + \theta_4x^4 \\ & J\left(\theta\right) = \dfrac{1}{2m} \sum_{i=1}^{m} \left( h_\theta \left( x^\left(i\right) \right) - y^\left(i\right) \right) ^2 + \underbrace{ \dfrac{\lambda}{2m} \sum_{j=1}^{m} \theta_j^2 } \end{aligned}$
+$\begin{aligned} \textsf{Model: } & h_\theta \left(x\right) = \theta_0 + \theta_1x + \theta_2x^2 + \theta_3x^3 + \theta_4x^4 \\ & J\left(\theta\right) = \dfrac{1}{2m} \sum_{i=1}^{m} \left( h_\theta \left( x^{\left(i\right)} \right) - y^{\left(i\right)} \right) ^2 + \underbrace{ \dfrac{\lambda}{2m} \sum_{j=1}^{m} \theta_j^2 } \end{aligned}$
 
 $\begin{matrix} \textsf{Large } \lambda && \textsf{Intermediate } \lambda && \textsf{Small } \lambda \\ \textsf{High Bias} & - & \textsf{just right} & - & \textsf{High Variance} \\ \textsf{underfit}&&&&\textsf{overfit} \end{matrix}$
 
 **Choosing the regularization parameter** $\lambda$
 
-$\begin{aligned} J\left(\theta\right) &= \dfrac{1}{2m} \sum_{i=1}^{m} \left( h_\theta \left( x^\left(i\right) \right) - y^\left(i\right) \right) ^2 + \dfrac{\lambda}{2m} \sum_{j=1}^{m} \theta_j^2 \\ J_{train}\left(\theta\right) &= \dfrac{1}{2m}\sum_{i=1}^{m} \left( h_\theta \left( x^\left(i\right) \right) - y^\left(i\right) \right) ^2 \\ J_{cv}\left(\theta\right) &= \dfrac{1}{2m_{cv}}\sum_{i=1}^{m_{cv}} \left( h_\theta \left( x_{cv}^\left(i\right) \right) - y_{cv}^\left(i\right) \right) ^2 \\ J_{test}\left(\theta\right) &= \dfrac{1}{2m_{test}}\sum_{i=1}^{m_{test}} \left( h_\theta \left( x_{test}^\left(i\right) \right) - y_{test}^\left(i\right) \right) ^2 \end{aligned}$
+$\begin{aligned} J\left(\theta\right) &= \dfrac{1}{2m} \sum_{i=1}^{m} \left( h_\theta \left( x^{\left(i\right)} \right) - y^{\left(i\right)} \right) ^2 + \dfrac{\lambda}{2m} \sum_{j=1}^{m} \theta_j^2 \\ J_{train}\left(\theta\right) &= \dfrac{1}{2m}\sum_{i=1}^{m} \left( h_\theta \left( x^{\left(i\right)} \right) - y^{\left(i\right)} \right) ^2 \\ J_{cv}\left(\theta\right) &= \dfrac{1}{2m_{cv}}\sum_{i=1}^{m_{cv}} \left( h_\theta \left( x_{cv}^{\left(i\right)} \right) - y_{cv}^{\left(i\right)} \right) ^2 \\ J_{test}\left(\theta\right) &= \dfrac{1}{2m_{test}}\sum_{i=1}^{m_{test}} \left( h_\theta \left( x_{test}^{\left(i\right)} \right) - y_{test}^{\left(i\right)} \right) ^2 \end{aligned}$
 
 try $\lambda = 0 ,\, 0.01 ,\, 0.02 ,\, 0.04 ,\, 0.08 ,\, \dots ,\, 10.24$, train $\min_\theta J\left(\theta\right)$, pick $\min J_{cv}\left(\theta\right)$, estimate $J_{test}\left(\theta\right)$
 

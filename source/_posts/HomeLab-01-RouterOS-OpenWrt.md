@@ -17,7 +17,7 @@ categories: [Software Engineering, Home Lab]
 
 ![network.drawio](HomeLab-01-RouterOS-OpenWrt/network.drawio.png)
 
-# 系统安装
+### 系统安装
 
 咱系统都装在 PVE 上, 方便备份和迁移. 之前装 PVE 的时候正好写了些备忘录, 那就把上一篇作为第 0 期呗.
 
@@ -57,7 +57,7 @@ BTW, ROS 和 OP 都是支持 QEMU Guest Agent 的, 所以可以给他打开.
 
 已经结束啦! **调整引导顺序**, 开机就行了.
 
-# 基础配置
+### 基础配置
 
 不想重复造轮子了, TLDR, RouterOS 的安装可以看官方的 [Getting Started](https://help.mikrotik.com/docs/display/ROS/First+Time+Configuration) 或者[这个视频](https://www.youtube.com/watch?v=h6K5FThk-T4), 总之, 最后的配置要点是:
 
@@ -77,7 +77,7 @@ BTW, ROS 和 OP 都是支持 QEMU Guest Agent 的, 所以可以给他打开.
 
 接下来可以配合旁路由使用了. OpenWrt 可以直接用 [eSir 的旁路由固件](https://drive.google.com/drive/folders/1ktbDgnnP8pTMERjpPuETNphzAjNA6hZ2), 安装方法可以看[他自己的视频](https://www.youtube.com/watch?v=e4IAZdAZ60w). 
 
-# 科学上网
+### 科学上网
 
 首先, 必须弄好科学上网! 先在旁路由做好代理, 然后在 ROS 添加一条分流, 可以自己配置需要匹配的项目, 如 IP 地址等.
 
@@ -136,7 +136,7 @@ OK, 这样只有最后一点小问题了, 那就是 Netwatch 的 simple type 用
 
 ![image-20220819012132099](HomeLab-01-RouterOS-OpenWrt/image-20220819012132099.png)
 
-# DNS 服务
+### DNS 服务
 
 ROS 也有非常好用的 DNS 缓存功能, 但是在墙内走 UDP 协议总有被劫持的情况. 而因为旁路由是带梯子的, 而且可以比较方便地配置 DoH/DoT, 所以可以直接在墙外拿到无污染的 DNS, 对 GFW DNS 劫持说不! 当然如果旁路由挂了, 下面这个脚本也会自动给上游 DNS 切回来.
 
@@ -174,7 +174,7 @@ ROS 也有非常好用的 DNS 缓存功能, 但是在墙内走 UDP 协议总有�
 
 ![image-20220819013456177](HomeLab-01-RouterOS-OpenWrt/image-20220819013456177.png)
 
-# Fullcone NAT
+### Fullcone NAT
 
 最后相当于个备忘吧, ROS 里的 Masquerade NAT 似乎并没有对应到常用的几种 NAT 类型, 我自己测了下是显示 Fullcone 的, 不过还是抄了个似乎更 "full" 的配置:
 

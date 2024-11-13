@@ -15,8 +15,6 @@ Obviously replace `SHA` with the reference you want to get rid of. The `^` in th
 
 <!-- more -->
 
-<br>
-
 #### Rebase
 
 First, find out how far back that commit is (approximately). Then do:
@@ -28,8 +26,6 @@ git rebase -i HEAD~N
 The `~N` means rebase the last `N` commits (`N` must be a number, for example `HEAD~10`).
 
 Then, you can edit the file that Git presents to you to delete the offending commit. On saving that file, Git will then rewrite all the following commits as if the one you deleted didn't exist.
-
-<br>
 
 #### Reset
 

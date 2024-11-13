@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course E
-**Sequence Models** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Sequence Models** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 2:*** *Natural Language Processing & Word Embeddings*
 
@@ -21,13 +21,50 @@ Deep Learning Specialization, Course E
 
 *the inner product between any two different **one-hot** vector is zero*
 
-![](Deep-Learning-Andrew-Ng-15/1.png)
+|          | Man (5391) | Woman (9853) | King (4914) | Queen (7157) | Apple (456) | Orange (6257) |
+|:--------:|:----------:|:------------:|:-----------:|:------------:|:-----------:|:-------------:|
+| Gender   | -1         | 1            | -0.95       | 0.97         | 0.00        | 0.01          |
+| Royal    | 0.01       | 0.02         | 0.93        | 0.95         | -0.01       | 0.00          |
+| Age      | 0.03       | 0.02         | 0.70        | 0.69         | 0.03        | -0.02         |
+| Food     | 0.09       | 0.01         | 0.02        | 0.01         | 0.95        | 0.97          |
+
 
 ##### t-SNE
 
 visualize word embeddings
 
-![](Deep-Learning-Andrew-Ng-15/2.png)
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360">
+  <!-- Border rectangle -->
+  <rect x="150" y="20" width="300" height="300"
+        fill="none" stroke="#000" stroke-width="2"/>
+  
+  <!-- Define arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+            refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4477CC"/>
+    </marker>
+  </defs>
+  
+  <!-- Left arrow (man to woman) -->
+  <line x1="220" y1="230" x2="300" y2="130"
+        stroke="#4477CC" stroke-width="2"
+        marker-end="url(#arrowhead)"/>
+  
+  <!-- Right arrow (king to queen) -->
+  <line x1="350" y1="230" x2="430" y2="130"
+        stroke="#4477CC" stroke-width="2"
+        marker-end="url(#arrowhead)"/>
+  
+  <!-- Labels -->
+  <text x="210" y="250" fill="#4477CC">man</text>
+  <text x="290" y="120" fill="#4477CC">woman</text>
+  <text x="340" y="250" fill="#4477CC">king</text>
+  <text x="420" y="120" fill="#4477CC">queen</text>
+  
+  <!-- Bottom label -->
+  <text x="300" y="350" fill="#4477CC" text-anchor="middle">300 D</text>
+</svg>
 
 #### Using Word Embeddings
 
@@ -131,12 +168,12 @@ $\begin{aligned} {\rm minimize} \ & \sum_i \sum_j f\left(X_{ij}\right) \left( \t
 
 #### Operations on Word Vectors - Debiasing
 
-![](/Deep-Learning-Andrew-Ng-15/10.png)
+![](Deep-Learning-Andrew-Ng-15/10.png)
 
 #### Emojify
 
-![](/Deep-Learning-Andrew-Ng-15/11.png)
+![](Deep-Learning-Andrew-Ng-15/11.png)
 
-![](/Deep-Learning-Andrew-Ng-15/12.png)
+![](Deep-Learning-Andrew-Ng-15/12.png)
 
 <a href='https://github.com/muhac/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

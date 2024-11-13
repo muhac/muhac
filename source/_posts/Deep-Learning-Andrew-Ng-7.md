@@ -8,7 +8,7 @@ mathjax: true
 
 Deep Learning Specialization, Course B
 **Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization**
-by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 3:*** *Hyperparameter Tuning, Batch Normalization and Programming Frameworks*
 
@@ -21,7 +21,7 @@ by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/
 #### Tuning Process
 
 - **hyperparameter**
-- ***α***
+  - ***α***
   - **β** ~ 0.9
   - β<sub>1</sub>, β<sub>2</sub>, ε = 0.9, 0.999, 10<sup>-8</sup>
   - *\# layers*
@@ -165,6 +165,6 @@ $dz^{\left[L\right]} = \dfrac{\partial J}{\partial z^{\left[L\right]}} = \hat{y}
 
 #### TensorFlow
 
-![t](/Deep-Learning-Andrew-Ng-7/4.png)
+![t](Deep-Learning-Andrew-Ng-7/4.png)
 
 <a href='https://github.com/muhac/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

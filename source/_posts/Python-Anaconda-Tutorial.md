@@ -17,6 +17,7 @@ categories: [Software Engineering, Python]
    ```bash
    conda info --envs
    ```
+
 2. **创建环境**
    ```bash
    conda create --name your_env_name
@@ -33,7 +34,9 @@ categories: [Software Engineering, Python]
    ```bash
    conda create -n your_env_name --clone oldname
    ```
+
    <!-- more -->
+
 3. **启用环境**
    ```bash
    conda activate your_env_name
@@ -42,14 +45,17 @@ categories: [Software Engineering, Python]
    ```bash
    activate your_env_name
    ```
+
 4. **停用环境**
    ```bash
    conda deactivate
    ```
+
 5. **删除环境**
    ```bash
    conda remove -n your_env_name --all
    ```
+
 6. **导出环境配置**
    ```bash
    conda env export > environment.yml
@@ -58,15 +64,16 @@ categories: [Software Engineering, Python]
    ```bash
    conda env export --no-builds > environment.yml
    ```
+
 7. **根据配置文件生成环境**
    ```bash
    conda env create -f environment.yml
    ```
+
 8. **根据配置文件升级环境**
    ```bash
    conda env update --name root --file environment.yml
    ```
-
 
 ### 包管理
 
@@ -78,6 +85,7 @@ categories: [Software Engineering, Python]
    ```bash
    conda list -n packagename
    ```
+
 2. **安装包**
    ```bash
    conda install packagename
@@ -86,6 +94,7 @@ categories: [Software Engineering, Python]
    ```bash
    conda install -n envname
    ```
+
 3. **更新包**
    ```bash
    conda update packagename
@@ -94,6 +103,7 @@ categories: [Software Engineering, Python]
    ```bash
    conda update -n envname packagename
    ```
+
 4. **删除包**
    ```bash
    conda remove packagename
@@ -102,6 +112,7 @@ categories: [Software Engineering, Python]
    ```bash
    conda remove -n envname
    ```
+
 5. **更新 conda、anaconda、python**
    ```bash
    conda update conda

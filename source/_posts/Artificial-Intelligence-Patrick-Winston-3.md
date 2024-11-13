@@ -12,13 +12,9 @@ MIT OPEN COURSE WARE
 6.034, Fall 2010, **Artificial Intelligence,** *Patrick H. Winston*  
 [Youtube](https://www.youtube.com/watch?v=TjZBTDzGeGg&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi) / [Bilibili](https://www.bilibili.com/video/av75097245)
 
-<br>
-
 本节内容：深度优先，广度优先，爬山算法，束搜索，代价一致，A\*
 
 <!-- more -->
-
-<br>
 
 ### 第四讲 深度优先、广度优先、爬山算法、 集束搜索
 
@@ -28,21 +24,15 @@ find every possible path（注意不能绕圈）
 
 ![British Museum](Artificial-Intelligence-Patrick-Winston-3/BritishMuseum.jpg)
 
-<br>
-
 #### Depth First Search
 
 *backup / backtracking*
 
 ![Depth First](Artificial-Intelligence-Patrick-Winston-3/DepthFirst.jpg)
 
-<br>
-
 #### Breadth First Search
 
 ![Breadth First](Artificial-Intelligence-Patrick-Winston-3/BreadthFirst.jpg)
-
-<br>
 
 #### Hill Climbing
 
@@ -58,15 +48,11 @@ find every possible path（注意不能绕圈）
 
 ![Hill Climbing](Artificial-Intelligence-Patrick-Winston-3/Hill.jpg)
 
-<br>
-
 #### Beam Search
 
 广度优先的改良：每层只保留离目标最近的 ω 个节点
 
 ![Beam Search](Artificial-Intelligence-Patrick-Winston-3/BeamSearch.jpg)
-
-<br>
 
 #### Best First Search
 
@@ -74,17 +60,13 @@ find every possible path（注意不能绕圈）
 
 ![Algorithm](Artificial-Intelligence-Patrick-Winston-3/Algorithm.png)
 
-<br>
-
 |       SEARCH       | BACKTRACKING | USE ENQUED LIST | INFORMED |
 | :----------------: | :----------: | :-------------: | :------: |
 | **British Museum** |      ×       |        ×        |    ×     |
-|  **Depth First**   |      √       |        √        |    ×     |
-| **Breadth First**  |      ×       |        √        |    ×     |
-| **Hill Climbing**  |      √       |        √        |    √     |
-|  **Beam Search**   |      ×       |        √        |    √     |
-
-<br>
+|  **Depth First**   |     $√$      |       $√$       |    ×     |
+| **Breadth First**  |      ×       |       $√$       |    ×     |
+| **Hill Climbing**  |     $√$      |       $√$       |   $√$    |
+|  **Beam Search**   |      ×       |       $√$       |   $√$    |
 
 ### 第五讲 代价一致、A\*
 
@@ -113,11 +95,10 @@ admissible: 确保小于实际距离（注：在这里直线距离给出了两�
 因此需要强化可容许启发式的限制条件：
 
 - **可容许 admissible**
-  $ H\left( x,G\right) \leq D\left( x,G\right) $
+  $H\left( x,G\right) \leq D\left( x,G\right)$
 
 - **一致性 consistent**
-  $ \left| H\left( x,G\right) -H\left( y,G\right) \right| \leq D\left( x,y\right) $
-  <br>
+  $\left| H\left( x,G\right) -H\left( y,G\right) \right| \leq D\left( x,y\right)$
 
 #### A\*
 
@@ -125,12 +106,8 @@ use both **EXTENDED LIST** and **ADMISSIBLE HEURISTIC**
 
 ![Algorithm](Artificial-Intelligence-Patrick-Winston-3/AlgorithmB.png)
 
-<br>
-
 {% cq %}
 
 Search is not about maps; **Search is about choice.**
 
 {% endcq %}
-
-<br>

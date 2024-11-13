@@ -11,13 +11,9 @@ MIT OPEN COURSE WARE
 6.034, Fall 2010, **Artificial Intelligence,** *Patrick H. Winston*  
 [Youtube](https://www.youtube.com/watch?v=TjZBTDzGeGg&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi) / [Bilibili](https://www.bilibili.com/video/av75097245)
 
-<br>
-
 本节内容：目标树，产生式系统
 
 <!-- more -->
-
-<br>
 
 #### 第二讲 目标树与问题求解
 
@@ -33,8 +29,6 @@ PROCEDURE:
 
 Safe transformations, Heuristic transformations
 
-<br>
-
 #### CATECHISM
 
 - WHAT KIND
@@ -43,14 +37,10 @@ Safe transformations, Heuristic transformations
 - HOW MUCH
 - WHAT EXACTLY
 
-<br>
-
 #### Modeling Problem Solving
 
 - Generate and Test
 - Problem Reduction
-
-<br>
 
 ### 第三讲 目标树和基于规则的专家系统（产生式）
 
@@ -62,15 +52,11 @@ Safe transformations, Heuristic transformations
 
 ![box](Artificial-Intelligence-Patrick-Winston-2/gt.jpg)
 
-<br>
-
 #### Simon's Ant
 
 The complexity of the behavior is a consequence of the complexity of the environment, not the complexity of the program.
 
 **C(behavior) = max{C(program), C(environment)}**
-
-<br>
 
 #### RULE-BASED SYSTEM
 
@@ -92,8 +78,6 @@ The complexity of the behavior is a consequence of the complexity of the environ
 
 **Deduction(演绎) System:** working with facts to produce new facts
 
-<br>
-
 #### 建立规则库
 
 1. 将专家做法转化为 IF-THEN 条件语句
@@ -101,12 +85,8 @@ The complexity of the behavior is a consequence of the complexity of the environ
 3. 考虑看起来相同但实际处理不同的东西
 4. 运行系统，看它在什么情况下会出错
 
-<br>
-
 {% cq %}
 
 Knowledge **about knowledge** is power.
 
 {% endcq %}
-
-<br>

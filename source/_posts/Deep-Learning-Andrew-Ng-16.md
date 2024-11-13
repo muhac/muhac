@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course E
-**Sequence Models** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Sequence Models** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 3:*** *Sequence Models & Attention Mechanism*
 
@@ -52,19 +52,15 @@ $\begin{aligned} & {\rm argmax}_y \prod_{t=1}^{T_y}  P\left(y^{\left\lt t \right
 #### Error Analysis in Beam Search
 
 - **Jane visite l'Afrique en septembre.** $\quad x$
-
   - ***Human:*** Jane visits Africa in September. $\quad y^\star$
   - ***Algorithm:***  Jane visited Africa last September. $\quad \hat{y}$
 
-- **RNN / Bean Search**
-
+- **RNN / Beam Search**
   - RNN computes $P\left(y|x\right)$
-
     $\begin{cases}\begin{aligned} P\left(y^\star|x\right) &> P\left(\hat{y}|x\right) & \textsf{beam search is at fault} \\ P\left(y^\star|x\right) &\leq P\left(\hat{y}|x\right) & \textsf{RNN model is at fault} \end{aligned}\end{cases}$
-
   - Figure out what faction of errors are due to beam search vs RNN model
 
-#### Bleu Score
+#### BLEU Score
 
 **Bilingual Evolution Understudy**
 
@@ -90,7 +86,17 @@ $\begin{aligned} & {\rm argmax}_y \prod_{t=1}^{T_y}  P\left(y^{\left\lt t \right
 
       $\begin{matrix} & \textsf{Count} & \textsf{Count}_{\textsf{clip}} & \\ \textrm{the cat} &2&1& \\ \textrm{cat the} &1&0& \\ \textrm{cat on} &1&1& \\ \textrm{on the} &1&1& \\ \textrm{the mat} &1&1& \\ &6&4& P = 4/6  \end{matrix}$
 
-$\begin{aligned} & \textsf{unigram}_{\strut} \\ P_1 &= \dfrac{\displaystyle\sum_{\textrm{unigram} \in\hat{y}} \textsf{Count}_{\textsf{clip}} \left(\textrm{unigram}\right)} {\displaystyle\sum_{\textrm{unigram} \in\hat{y}} \textsf{Count} \left(\textrm{unigram}\right)} \\\\ & \textsf{n-gram}_{\strut} \\ P_n &= \dfrac{\displaystyle\sum_{\textrm{n-gram} \in\hat{y}} \textsf{Count}_{\textsf{clip}} \left(\textrm{n-gram}\right)} {\displaystyle\sum_{\textrm{n-gram} \in\hat{y}} \textsf{Count} \left(\textrm{n-gram}\right)} \\\\ & \textsf{combined bleu score}_{\strut} \\ P &= {\rm BP} \exp \left( \dfrac{1}{4} \sum_n P_n \right) \\ & \textrm{BP: brevity penalty} \\ {\rm BP} &= \begin{cases} 1 & \textrm{if  MT_length > REF_length} \\ \exp \left(1- \dfrac{\textrm{REF_length}}{\textrm{MT_length}}\right) \quad & \textrm{otherwise} \end{cases}\end{aligned}$
+##### unigram
+
+$\begin{aligned} P_1 &= \dfrac{\displaystyle\sum_{\textrm{unigram} \in\hat{y}} \textsf{Count}_{\textsf{clip}} \left(\textrm{unigram}\right)} {\displaystyle\sum_{\textrm{unigram} \in\hat{y}} \textsf{Count} \left(\textrm{unigram}\right)} \end{aligned}$
+
+##### n-gram
+
+$\begin{aligned} P_n &= \dfrac{\displaystyle\sum_{\textrm{n-gram} \in\hat{y}} \textsf{Count}_{\textsf{clip}} \left(\textrm{n-gram}\right)} {\displaystyle\sum_{\textrm{n-gram} \in\hat{y}} \textsf{Count} \left(\textrm{n-gram}\right)} \end{aligned}$
+
+##### combined bleu score
+
+$\begin{aligned} P &= {\rm BP} \exp \left( \dfrac{1}{4} \sum_n P_n \right) \\ & \textrm{BP: brevity penalty} = \begin{cases} 1 & \textrm{if  MT_length > REF_length} \\ \exp \left(1- \dfrac{\textrm{REF\_length}}{\textrm{MT\_length}}\right) \quad & \textrm{otherwise} \end{cases} \end{aligned}$
 
 #### Attention Model Intuition
 

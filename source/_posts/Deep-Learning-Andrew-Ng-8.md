@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course C
-**Structuring Machine Learning Projects** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Structuring Machine Learning Projects** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 1:*** *ML Strategy (1)*
 
@@ -102,7 +102,7 @@ train / dev / test
 Metric + Dev: prefers A *(misprediction)*  
 You / Users: prefers B
 
-$\begin{aligned}{\rm classification}\ &{\rm error}  _{\strut} \\ \textsf{Algorithm A: }& 3\%\ {\rm error} \textsf{ but contains pornographies} \\ \textsf{Algorithm B: }& 5\%\ {\rm error} _{\strut} \\ \textsf{Error: }& \dfrac{1}{m_{dev}} \sum_{i=1}^{m_{dev}} L\left\{ y_{\rm pred}^{\left(i\right)} \neq y^{\left(i\right)} \right\} \\ \textsf{New Error: }& \dfrac{1}{ \sum_{i=1}^{m_{dev}} \omega^{\left(i\right)}} \sum_{i=1}^{m_{dev}} \omega^{\left(i\right)} L\left\{ y_{\rm pred}^{\left(i\right)} \neq y^{\left(i\right)} \right\} \\ & \qquad\qquad \omega^{\left(i\right)}= \begin{cases} 1 \ \ &{\rm if}\ x^{\left(i\right)}\ {\rm is}\ {\rm non}\!\!-\!\!{\rm porn} \\ 10 &{\rm if}\ x^{\left(i\right)}\ {\rm is}\ {\rm porn} \end{cases} \end{aligned}$
+$\begin{aligned}{\rm classification}\ &{\rm error}  _{\strut} \\ \textsf{Algorithm A: }& 3\%\ {\rm error} \textsf{ but contains pornographies} \\ \textsf{Algorithm B: }& 5\%\ {\rm error} _{\strut} \\ \textsf{Error: }& \dfrac{1}{m_{dev}} \sum_{i=1}^{m_{dev}} L\left\{ y_{\rm pred}^{\left(i\right)} \neq y^{\left(i\right)} \right\} \\ \textsf{New Error: }& \dfrac{1}{ \sum_{i=1}^{m_{dev}} \omega^{\left(i\right)}} \sum_{i=1}^{m_{dev}} \omega^{\left(i\right)} L\left\{ y_{\rm pred}^{\left(i\right)} \neq y^{\left(i\right)} \right\} \\ & \qquad\qquad \omega^{\left(i\right)}= \begin{cases} 1 \ \ &{\rm if}\ x^{\left(i\right)}\ {\rm is}\ {\rm non}\\!\\!-\\!\\!{\rm porn} \\ 10 &{\rm if}\ x^{\left(i\right)}\ {\rm is}\ {\rm porn} \end{cases} \end{aligned}$
 
 1. ***Place the target:*** define a metric to evaluate classifiers
 2. ***Shoot at target:*** worry separately about how to do well on this metric

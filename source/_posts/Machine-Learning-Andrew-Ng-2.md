@@ -6,7 +6,7 @@ categories: [Computer Science, Machine Learning]
 mathjax: true
 ---
 
-Stanford University, **Machine Learning,** *Andrew Ng,* [Coursera]( https://www.coursera.org/learn/machine-learning/home/info )
+Stanford University, **Machine Learning,** *Andrew Ng,* [Coursera](https://www.coursera.org/learn/machine-learning/home/info)
 
 ***Week 2:*** Multivariate Linear Regression
 
@@ -29,11 +29,11 @@ $\begin{aligned}& x_0 = 0, \quad x = \left[ \begin{matrix} x_0 \\ x_1 \\ x_2 \\ 
 
 ##### Cost Function
 
-$\begin{aligned} J\left(\theta\right) = \dfrac{1}{2m} \sum_{i=1}^{m} \left( h_\theta\left( x^\left(i\right) \right) - y^\left(i\right) \right) ^2 \end{aligned}$
+$\begin{aligned} J\left(\theta\right) = \dfrac{1}{2m} \sum_{i=1}^{m} \left( h_\theta\left( x^{\left(i\right)} \right) - y^{\left(i\right)} \right) ^2 \end{aligned}$
 
 ##### Gradient Descent
 
-$\begin{aligned} & \textsf{repeat:} \\ & \qquad \theta_j := \theta_j - \alpha \cdot \dfrac{\partial}{\partial \theta_j} J\left(\theta\right) = \theta_j - \alpha \cdot \dfrac{1}{m} \sum_{i=1}^{m} \left( h_\theta\left( x^\left(i\right) \right) - y^\left(i\right) \right) x_j ^\left(i\right) \\ & \qquad \text{simultaneously update for every } j=0,\,\dots,\,n \end{aligned}$
+$\begin{aligned} & \textsf{repeat:} \\ & \qquad \theta_j := \theta_j - \alpha \cdot \dfrac{\partial}{\partial \theta_j} J\left(\theta\right) = \theta_j - \alpha \cdot \dfrac{1}{m} \sum_{i=1}^{m} \left( h_\theta\left( x^{\left(i\right)} \right) - y^{\left(i\right)} \right) x_j ^{\left(i\right)} \\ & \qquad \text{simultaneously update for every } j=0,\,\dots,\,n \end{aligned}$
 
 ##### Feature Scaling
 

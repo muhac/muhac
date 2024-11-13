@@ -5,7 +5,7 @@ tags: [Home Lab, Router]
 categories: [Software Engineering, Home Lab]
 ---
 
-# 前言
+### 前言
 
 前面说到, 换到 RouterOS 确实系统启动快了非常多, 资源消耗也非常小, 但是又引出了几个新的痛点...
 
@@ -22,7 +22,7 @@ categories: [Software Engineering, Home Lab]
 
 ![Xnip2022-11-27_02-59-53](HomeLab-02-OPNsense-HA/Xnip2022-11-27_02-59-53.png)
 
-# 安装
+### 安装
 
 安装 OPNsense 相对比较简单, 需要注意的是 CPU 最好手动打开 AES 支持.
 
@@ -36,7 +36,7 @@ categories: [Software Engineering, Home Lab]
 
 ![Xnip2022-11-27_01-33-53](HomeLab-02-OPNsense-HA/Xnip2022-11-27_01-33-53.png)
 
-# 配置
+### 配置
 
 安装完成后, root 用户的默认密码也是 `opnsense` . 既然我是已经安装完了, 就说下配置备份和转移的方法吧.
 
@@ -52,28 +52,28 @@ categories: [Software Engineering, Home Lab]
 
 下面写一下系统基础配置的简介.
 
-### System
+#### System
 
-#### Settings
+##### Settings
 
 非常重要的一点, DNS Servers 请留空, 让系统请求自身的 DNS 服务器 (默认是 Unbound DNS). 这样可以实现纯净的 DoT/DoH, 这项稍后说.
 
 ![Xnip2022-11-27_02-36-42](HomeLab-02-OPNsense-HA/Xnip2022-11-27_02-36-42.png)
 
-### Interface
+#### Interface
 
-#### WAN
+##### WAN
 
 对于 WAN 口, 根据自己的连接方式选择 DHCP / PPPoE.
 
-#### LAN
+##### LAN
 
 LAN 口的话, IPv4选静态 IP, IPv6 选跟踪上游就行, 其他的配置可以看个人喜好配置.
 ![Xnip2022-11-27_02-30-07](HomeLab-02-OPNsense-HA/Xnip2022-11-27_02-30-07.png)
 
-### Services
+#### Services
 
-#### DHCPv4
+##### DHCPv4
 
 这里, 可以设置默认的 DNS Server 和 Gateway 为本机, 之后在静态分配时可以指定为旁路由地址, 实现按需分流.
 
@@ -81,10 +81,10 @@ LAN 口的话, IPv4选静态 IP, IPv6 选跟踪上游就行, 其他的配置可�
 
 创建静态分配点加号即可, IP Address, DNS Servers, Gateway, Domain Name 等等都可以单独指定.
 
-#### Unbound DNS
+##### Unbound DNS
 
 TBD
 
-# 高可用
+### 高可用
 
 TBW

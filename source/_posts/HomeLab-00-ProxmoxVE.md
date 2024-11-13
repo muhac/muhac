@@ -5,13 +5,13 @@ tags: [Home Lab, Virtual Machine]
 categories: [Software Engineering, Home Lab]
 ---
 
-# Download & Install
+### Download & Install
 
 Download links: [PVE](https://www.proxmox.com/en/downloads/category/iso-images-pve), [Rufus](https://rufus.ie/downloads/).
 
-# General Setups
+### General Setups
 
-## Port Forwarding
+#### Port Forwarding
 
 Access web interface on port 443.
 
@@ -19,7 +19,7 @@ Access web interface on port 443.
 iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8006
 ```
 
-## Startup Scripts
+#### Startup Scripts
 
 There is no `rc.local` file in PVE, but you can use `crontab`.
 
@@ -32,7 +32,7 @@ Edit file `/etc/crontab`, add a line:
 
 <!-- more -->
 
-## Remove Subscription Notice
+#### Remove Subscription Notice
 
 Edit `/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js` (line 513 at PVE v7.2).
 
@@ -41,7 +41,7 @@ Edit `/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js` (line 513 at P
 if (false && (res === null || res === undefined || !res || res .data.status.toLowerCase() !== 'active')) {
 ```
 
-## Disable Enterprise Repository
+#### Disable Enterprise Repository
 
 In `/etc/apt/sources.list.d/pve-enterprise.list`, comment out
 
@@ -51,7 +51,7 @@ In `/etc/apt/sources.list.d/pve-enterprise.list`, comment out
 
 Add a no-subscription repository `Node - Updates - Repositories - Add`.
 
-## Limit ZFS Memory Usage
+#### Limit ZFS Memory Usage
 
 ZFS uses 50% of the host memory for the Adaptive Replacement Cache by default. Allocating enough memory for the ARC is crucial for IO performance, so reduce it with caution.
 
@@ -70,9 +70,9 @@ update-initramfs -u
 
 You **must reboot** to activate these changes.
 
-# Managing VMs
+### Managing VMs
 
-## Uploading Disks
+#### Uploading Disks
 
 Upload the image file to `local` storage, and the target file should be at `/var/lib/vz/template/iso/[IMAGE].img`. Import the disk image using this command:
 
@@ -80,7 +80,7 @@ Upload the image file to `local` storage, and the target file should be at `/var
 qm importdisk [VMID] /var/lib/vz/template/iso/[IMAGE].img local-lvm
 ```
 
-## Managing Backups
+#### Managing Backups
 
 All backups are stored at `/var/lib/vz/dump/` folder.
 

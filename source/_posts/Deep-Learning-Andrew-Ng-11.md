@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course D
-**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 2:*** *Deep Convolutional Models: case studies*
 
@@ -126,10 +126,10 @@ $\begin{aligned} {Little\ Data \atop {\small\textsf{more hand-engineering} \atop
 
 #### Keras Tutorial
 
-![1](/Deep-Learning-Andrew-Ng-11/14.png)
+![1](Deep-Learning-Andrew-Ng-11/14.png)
 
 #### Residual Networks
 
-![1](/Deep-Learning-Andrew-Ng-11/15.png)
+![1](Deep-Learning-Andrew-Ng-11/15.png)
 
 <a href='https://github.com/muhac/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course D
-**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 4:*** *Special Applications: Face Recognition & Neural Style Transfer*
 
@@ -124,10 +124,10 @@ $J\left(G\right) = \alpha\cdot J_{\rm content} \left(C,G\right) + \beta\cdot J_{
 
 #### Art generation with Neural Style Transfer
 
-![](/Deep-Learning-Andrew-Ng-13/8.png)
+![](Deep-Learning-Andrew-Ng-13/8.png)
 
 #### Face Recognition
 
-![](/Deep-Learning-Andrew-Ng-13/9.png)
+![](Deep-Learning-Andrew-Ng-13/9.png)
 
 <a href='https://github.com/muhac/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

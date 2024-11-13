@@ -10,9 +10,7 @@ Yale University, **Game Theory,** Economics 159
 
 > Game theory is a method of studying strategic situations.
 
-<br>
-
-## Class 1 - Prisoners' Dilemma
+### Class 1: Prisoners' Dilemma
 
 {% note default %}
 #### Game 1
@@ -29,9 +27,7 @@ $\begin{matrix} & \begin{matrix} \textrm{Pair} \end{matrix} &&& \textrm{payoffs}
 <p style='text-align:left!important'><strong>Lesson 5:</strong> Yale students are evil.</p>
 {% endcq %}
 
-<br>
-
-## Class 2 - Deleting Dominated Strategies
+### Class 2: Deleting Dominated Strategies
 
 $ \textrm{ingredients of a game: } \begin{cases} \texttt{players} \\ \texttt{strategies} \\ \texttt{payoffs} \end{cases}$
 
@@ -47,9 +43,7 @@ $\begin{cases} 67 \sim 100 \ \ & & \textrm{weakly dominated} & \textit{ lesson 1
 
 {% endnote %}
 
-<br>
-
-## Class 3 - Median Voter Theorem
+### Class 3: Median Voter Theorem
 
 {% note default %}
 
@@ -63,9 +57,7 @@ $\begin{matrix} \textrm{2 strictly dominates 1} \\  \textrm{9 strictly dominates
 
 {% endnote %}
 
-<br>
-
-## Class 4 - Best Response
+### Class 4: Best Response
 
 {% note default %}
 
@@ -112,9 +104,7 @@ $\texttt{iterative deletion until converge} \quad\Rightarrow\quad s_1^\ast = s_2
 
 {% endnote %}
 
-<br>
-
-## Class 5 - Nash Equilibrium (Coordination Problems)
+### Class 5: Nash Equilibrium (Coordination Problems)
 
 **Nash Equilibrium:** players are playing a best response to each other. no individual can do **strictly** better by deviating, holding everyone else's actions *(no regrets)*.
 
@@ -156,9 +146,7 @@ $\begin{matrix} & \begin{matrix} &&&&&&&\textrm{P2} \end{matrix}  \\ \begin{matr
 
 {% endnote %}
 
-<br>
-
-## Class 6 - Nash Equilibrium (Cournot Duopoly)
+### Class 6: Nash Equilibrium (Cournot Duopoly)
 
 {% note default %}
 

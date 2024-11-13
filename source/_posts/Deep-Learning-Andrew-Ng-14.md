@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course E
-**Sequence Models** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Sequence Models** by deeplearning.ai, ***Andrew Ng,*** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
 ***Week 1:*** *Recurrent Neural Networks*
 
@@ -119,14 +119,14 @@ $\hat{y}^{\left\lt t\right\gt } = g\left( W_y \left[ \overrightarrow {a}^{\left\
 
 #### Building a Recurrent Neural Network - step by step
 
-![](/Deep-Learning-Andrew-Ng-14/10.png)
+![](Deep-Learning-Andrew-Ng-14/10.png)
 
 #### Dinosaur Island - Character-Level Language Modeling
 
-![](/Deep-Learning-Andrew-Ng-14/11.png)
+![](Deep-Learning-Andrew-Ng-14/11.png)
 
 #### Jazz Improvisation with LSTM
 
-![](/Deep-Learning-Andrew-Ng-14/12.png)
+![](Deep-Learning-Andrew-Ng-14/12.png)
 
 <a href='https://github.com/muhac/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>
