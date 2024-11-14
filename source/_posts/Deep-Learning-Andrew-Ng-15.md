@@ -36,7 +36,7 @@ visualize word embeddings
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360">
   <!-- Border rectangle -->
   <rect x="150" y="20" width="300" height="300"
-        fill="none" stroke="#000" stroke-width="2"/>
+        fill="none" stroke="currentColor" stroke-width="2"/>
   
   <!-- Define arrow marker -->
   <defs>
@@ -107,13 +107,9 @@ $\begin{aligned} & \Rightarrow \quad \textrm{I want a glass of orange juice to g
 **Problems**
 
 - ***softmax is slow***
-
   - hierarchical softmax classifier
-
     ![](Deep-Learning-Andrew-Ng-15/6.png)
-
 - ***how to sample the context c***
-
   - uniformly random → *the, of, a, and, to, ...*
   - **heuristics**
 

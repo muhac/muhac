@@ -46,7 +46,7 @@ jobs:
 
       - name: Configuration and patch
         run: |
-          cp -r conf/modules/* node_modules/
+          cp -r patch/modules/* node_modules/
 
       - name: List node modules
         run: tree -L 1 node_modules

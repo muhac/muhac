@@ -117,7 +117,7 @@ $w_1 :=w_1 -\alpha \cdot dw_1 \\ w_2 :=w_2 -\alpha \cdot dw_2 \\ b:=b-\alpha \cd
 
 $z = w^{\mathsf{T}}x+b$
 
-$w = \left[ \begin{matrix} \vdots \\ \vdots \end{matrix} \right] \qquad x = \left[ \begin{matrix} \vdots \\ \vdots \end{matrix} \right]  \qquad w\in\mathbb{R}^{n_x}, \  x\in\mathbb{R}^{n_x}$
+$w = \left[ \begin{matrix} \ \vdots \ \\ \vdots \end{matrix} \right] \qquad x = \left[ \begin{matrix} \ \vdots \ \\ \vdots \end{matrix} \right]  \qquad w\in\mathbb{R}^{n_x}, \  x\in\mathbb{R}^{n_x}$
 
 **non-vectorized**
 

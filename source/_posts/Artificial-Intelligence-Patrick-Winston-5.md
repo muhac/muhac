@@ -76,7 +76,7 @@ VALUE **x**: something that can be an assignment
 DOMAIN **D**: bag of values
 CONSTRAINT **C**: limit on variable values
 
-```
+```vb
 FOR EACH DFS ASSIGNMENT
   FOR EACH VARIABLE Vi CONSIDERED
     FOR EACH Xi IN Di

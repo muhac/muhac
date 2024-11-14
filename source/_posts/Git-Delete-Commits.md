@@ -3,11 +3,13 @@ title: Git · Delete Commits
 date: 2021-05-01 22:38:00
 tags: [Git, GitHub]
 categories: [Software Engineering, Git]
+group: snippet
+hidden: true
 ---
 
 **Removing an entire commit**
 
-```shell
+```bash
 git rebase -p --onto SHA^ SHA
 ```
 
@@ -19,7 +21,7 @@ Obviously replace `SHA` with the reference you want to get rid of. The `^` in th
 
 First, find out how far back that commit is (approximately). Then do:
 
-```shell
+```bash
 git rebase -i HEAD~N
 ```
 
@@ -31,7 +33,7 @@ Then, you can edit the file that Git presents to you to delete the offending com
 
 Assuming you are sitting on that commit, then this command will wack it:
 
-```sh
+```bash
 git reset --hard HEAD~1
 ```
 
@@ -39,18 +41,18 @@ The `HEAD~1` means the commit before head.
 
 If you want to keep your work and just *undo* that commit command:
 
-```shell
+```bash
 git reset --soft HEAD~1
 ```
 
 Or, you could look at the output of `git log`, find the commit id of the commit you want to back up to:
 
-```sh
+```bash
 git reset --hard <sha1-commit-id>
 ```
 
 If you already pushed it, you will need to do a force push to get rid of it.
 
-```shell
+```bash
 git push origin HEAD --force
 ```

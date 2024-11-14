@@ -16,7 +16,7 @@ Stanford University, **Machine Learning,** *Andrew Ng,* [Coursera](https://www.c
 
 ##### Non-linear Hypotheses
 
-$\textrm{polynomial terms:} \quad n_{\textsf{}^{\textsf{quadratic}}_{\textsf{features}}} \sim O\left( n_{\textsf{}^{\textsf{original}}_{\textsf{features}}} ^2 \right) \qquad n_{\textsf{}^{\textsf{cubic}}_{\textsf{features}}} \sim O\left( n_{\textsf{}^{\textsf{original}}_{\textsf{features}}} ^3 \right)$
+polynomial terms: $\quad n_{\textsf{}^{\textsf{quadratic}}_{\textsf{features}}} \sim O\left( n_{\textsf{}^{\textsf{original}}_{\textsf{features}}} ^2 \right) \quad n_{\textsf{}^{\textsf{cubic}}_{\textsf{features}}} \sim O\left( n_{\textsf{}^{\textsf{original}}_{\textsf{features}}} ^3 \right)$
 
 <!-- more -->
 

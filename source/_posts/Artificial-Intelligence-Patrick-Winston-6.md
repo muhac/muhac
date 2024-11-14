@@ -24,17 +24,19 @@ MIT OPEN COURSE WARE
    - Nearest Neighbors <sup>*pattern recognition*</sup>
    - Neural Nets <sup>*mimic biology*</sup>
    - Boosting <sup>*theory*</sup>
+
+
 2. BASED ON **CONSTRAINS** <sup>*HUMANLIKE*</sup>
    - One Shot
    - Explanation Based Learning
 
 #### NEAREST NEIGHBOR BASED LEARNING
 
-<svg viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 180" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
    <!-- 矩形节点 -->
    <rect x="20" y="100"
          width="100" height="60" rx="5"
-         fill="transparent" stroke="black"/>
+         fill="transparent" stroke="currentColor"/>
    <text x="70" y="130"
          text-anchor="middle"
          dominant-baseline="middle">
@@ -42,11 +44,11 @@ MIT OPEN COURSE WARE
    </text>
 
    <!-- 箭头连接线 -->
-   <path d="M 120,130 L 190,130" stroke="black" fill="none"/>
+   <path d="M 120,130 L 190,130" stroke="currentColor" fill="none"/>
     
    <rect x="190" y="100"
          width="150" height="60" rx="5"
-         fill="transparent" stroke="black"/>
+         fill="transparent" stroke="currentColor"/>
    <text x="265" y="120"
          text-anchor="middle"
          dominant-baseline="middle">
@@ -55,11 +57,11 @@ MIT OPEN COURSE WARE
    </text>
 
    <!-- 箭头连接线 -->
-   <path d="M 340,130 L 410,130" stroke="black" fill="none"/>
+   <path d="M 340,130 L 410,130" stroke="currentColor" fill="none"/>
     
    <rect x="410" y="100"
          width="150" height="60" rx="5"
-         fill="transparent" stroke="black"/>
+         fill="transparent" stroke="currentColor"/>
    <text x="485" y="130"
          text-anchor="middle"
          dominant-baseline="middle">
@@ -67,11 +69,11 @@ MIT OPEN COURSE WARE
    </text>
 
    <!-- 箭头连接线 -->
-   <path d="M 560,130 L 630,130" stroke="black" fill="none"/>
+   <path d="M 560,130 L 630,130" stroke="currentColor" fill="none"/>
 
    <rect x="630" y="100"
          width="150" height="60" rx="5"
-         fill="transparent" stroke="black"/>
+         fill="transparent" stroke="currentColor"/>
    <text x="705" y="130"
          text-anchor="middle"
          dominant-baseline="middle">
@@ -79,11 +81,11 @@ MIT OPEN COURSE WARE
    </text>
 
    <!-- 箭头连接线 -->
-   <path d="M 485,60 L 485,100" stroke="black" fill="none"/>
+   <path d="M 485,60 L 485,100" stroke="currentColor" fill="none"/>
 
    <rect x="410" y="20"
          width="150" height="40" rx="5"
-         fill="transparent" stroke="black"/>
+         fill="transparent" stroke="currentColor"/>
    <text x="485" y="40"
          text-anchor="middle"
          dominant-baseline="middle">
@@ -178,7 +180,7 @@ $$
 
 ###### <span style="font-size:110%;">NUMERICAL data</span>
 
-NUMERICAL --> ***threshold*** --> *binary test*
+NUMERICAL → ***threshold*** → *binary test*
 
 ![numerical](Artificial-Intelligence-Patrick-Winston-6/t.jpg)
 
@@ -194,7 +196,7 @@ Go down each branch to the leaf.
 
 ![Test 2](Artificial-Intelligence-Patrick-Winston-6/idt.jpg)
 
-```
+```fortran
 IF SHADOW = ? & GARLIC = Y THEN -
 IF SHADOW = ? & GARLIC = N THEN +
 IF SHADOW = Y THEN -
@@ -203,7 +205,7 @@ IF SHADOW = N THEN +
 
 然后对规则优化.，例如：
 
-```
+```fortran
 IF SHADOW = ?   <-- no need to take both tests
    GARLIC = Y
 THEN -

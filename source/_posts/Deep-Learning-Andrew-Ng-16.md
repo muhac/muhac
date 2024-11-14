@@ -51,9 +51,10 @@ $\begin{aligned} & {\rm argmax}_y \prod_{t=1}^{T_y}  P\left(y^{\left\lt t \right
 
 #### Error Analysis in Beam Search
 
-- **Jane visite l'Afrique en septembre.** $\quad x$
-  - ***Human:*** Jane visits Africa in September. $\quad y^\star$
-  - ***Algorithm:***  Jane visited Africa last September. $\quad \hat{y}$
+- **Jane visite l'Afrique en septembre.** &ensp; $x$
+  - ***Human:*** Jane visits Africa in September. &ensp; $y^\star$
+  - ***Algorithm:***  Jane visited Africa last September. &ensp; $\hat{y}$
+
 
 - **RNN / Beam Search**
   - RNN computes $P\left(y|x\right)$

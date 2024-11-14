@@ -62,7 +62,50 @@ Validation error: $\begin{aligned} J_{cv}\left(\theta\right) = \dfrac{1}{2m_{cv}
 
 $\begin{aligned} \textsf{Model: } & h_\theta \left(x\right) = \theta_0 + \theta_1x + \theta_2x^2 + \theta_3x^3 + \theta_4x^4 \\ & J\left(\theta\right) = \dfrac{1}{2m} \sum_{i=1}^{m} \left( h_\theta \left( x^{\left(i\right)} \right) - y^{\left(i\right)} \right) ^2 + \underbrace{ \dfrac{\lambda}{2m} \sum_{j=1}^{m} \theta_j^2 } \end{aligned}$
 
-$\begin{matrix} \textsf{Large } \lambda && \textsf{Intermediate } \lambda && \textsf{Small } \lambda \\ \textsf{High Bias} & - & \textsf{just right} & - & \textsf{High Variance} \\ \textsf{underfit}&&&&\textsf{overfit} \end{matrix}$
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <!-- Background -->
+  <rect width="800" height="300" fill="white"/>
+  
+  <!-- Connecting line -->
+  <line x1="100" y1="150" x2="700" y2="150" stroke="#666666" stroke-width="3"/>
+  
+  <!-- Arrow heads -->
+  <polygon points="695,145 710,150 695,155" fill="#666666"/>
+  <polygon points="105,145 90,150 105,155" fill="#666666"/>
+  
+  <!-- Left section (Large λ) -->
+  <text x="100" y="50" text-anchor="middle" font-family="Arial" font-size="24" fill="#333333">Large λ</text>
+  <text x="100" y="80" text-anchor="middle" font-family="Arial" font-size="20" fill="#cc0000">High Bias</text>
+  <text x="100" y="110" text-anchor="middle" font-family="Arial" font-size="20" fill="#cc0000">underfit</text>
+  
+  <!-- Middle section (Intermediate λ) -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial" font-size="24" fill="#333333">Intermediate λ</text>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial" font-size="20" fill="#009900">just right</text>
+  
+  <!-- Right section (Small λ) -->
+  <text x="700" y="50" text-anchor="middle" font-family="Arial" font-size="24" fill="#333333">Small λ</text>
+  <text x="700" y="80" text-anchor="middle" font-family="Arial" font-size="20" fill="#0066cc">High Variance</text>
+  <text x="700" y="110" text-anchor="middle" font-family="Arial" font-size="20" fill="#0066cc">overfit</text>
+  
+  <!-- Model fit visualization -->
+  <!-- Underfit (left) -->
+  <circle cx="100" cy="230" r="5" fill="#333333"/>
+  <circle cx="120" cy="210" r="5" fill="#333333"/>
+  <circle cx="140" cy="250" r="5" fill="#333333"/>
+  <path d="M80,240 Q120,230 160,220" stroke="#cc0000" stroke-width="3" fill="none"/>
+  
+  <!-- Just right (middle) -->
+  <circle cx="380" cy="230" r="5" fill="#333333"/>
+  <circle cx="400" cy="210" r="5" fill="#333333"/>
+  <circle cx="420" cy="250" r="5" fill="#333333"/>
+  <path d="M360,240 Q400,220 440,240" stroke="#009900" stroke-width="3" fill="none"/>
+  
+  <!-- Overfit (right) -->
+  <circle cx="680" cy="230" r="5" fill="#333333"/>
+  <circle cx="700" cy="210" r="5" fill="#333333"/>
+  <circle cx="720" cy="250" r="5" fill="#333333"/>
+  <path d="M660,240 C680,220 690,260 700,210 C710,160 720,280 740,240" stroke="#0066cc" stroke-width="3" fill="none"/>
+</svg>
 
 **Choosing the regularization parameter** $\lambda$
 
@@ -84,17 +127,14 @@ try $\lambda = 0 ,\, 0.01 ,\, 0.02 ,\, 0.04 ,\, 0.08 ,\, \dots ,\, 10.24$, train
   - try getting additional features
   - try adding polynomial features
   - try decreasing $\lambda$
-
 - **fix high variance**
   - get more training examples
   - try smaller sets of features
   - try increasing $\lambda$
-
 - ***small* neural network**
   - fewer parameters
   - more prone to underfitting
   - computationally cheaper
-
 - ***large* neural network**
   - more parameters
   - more prone to overfitting

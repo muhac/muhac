@@ -63,7 +63,7 @@ $\qquad \displaystyle\min_{x ^{\left(1\right)} ,\, \dots ,\, x ^{\left(n_m\right
 - Given $x ^{\left(1\right)} ,\, x ^{\left(2\right)} ,\, \dots ,\, x ^{\left(n_m\right)}$, can estimate $\theta ^{\left(1\right)} ,\, \theta ^{\left(2\right)} ,\, \dots ,\, \theta ^{\left(n_u\right)}$
 - Given $\theta ^{\left(1\right)} ,\, \theta ^{\left(2\right)} ,\, \dots ,\, \theta ^{\left(n_u\right)}$, can estimate $x ^{\left(1\right)} ,\, x ^{\left(2\right)} ,\, \dots ,\, x ^{\left(n_m\right)}$
 
-$\textsf{Guess } \theta \rightarrow x \rightarrow \theta \rightarrow x \rightarrow \theta \rightarrow x \rightarrow \cdots \textsf{until converge}$
+Guess $\theta \rightarrow x \rightarrow \theta \rightarrow x \rightarrow \theta \rightarrow x \rightarrow \cdots$ until converge
 
 ##### Collaborative Filtering Algorithm
 

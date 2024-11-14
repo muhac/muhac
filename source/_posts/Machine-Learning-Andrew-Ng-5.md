@@ -18,8 +18,8 @@ Stanford University, **Machine Learning,** *Andrew Ng,* [Coursera](https://www.c
 
 $y = 0 \textrm{ or } 1$, 1 output unit: $h_\Theta \left(x\right) \in \mathbb{R} \quad s_L=1$
 
-- ***L:*** total number of layers in network
-- ***s<sub>l</sub>:*** number of units in layer l
+- $L$: total number of layers in network
+- $s_l$: number of units in layer $l$
 
 **Multi-class Classification**
 

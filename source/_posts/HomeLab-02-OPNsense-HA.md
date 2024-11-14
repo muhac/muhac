@@ -3,6 +3,7 @@ title: Home Lab (2) · OPNsense and High Availability
 date: 2022-11-27 01:26:03
 tags: [Home Lab, Router]
 categories: [Software Engineering, Home Lab]
+lang: zh-CN
 ---
 
 ### 前言

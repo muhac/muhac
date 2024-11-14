@@ -53,19 +53,19 @@ BASIC METHODS → NAIVE MIMICRY → FOCUS ON PROBLEM → FOCUS ON THEORY FIOS (f
 
 #### Phonology
 
-<svg viewBox="0 0 800 170" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 170" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <marker id="arrow" markerWidth="12" markerHeight="8" 
                 refX="10" refY="4" orient="auto">
             <path d="M 0 0 L 10 4 L 0 8" 
-                  fill="none" stroke="black" stroke-width="1"/>
+                  fill="none" stroke="currentColor" stroke-width="1"/>
         </marker>
     </defs>
 
    <!-- 矩形节点 -->
    <rect x="20" y="40"
          width="120" height="90" rx="5"
-         fill="transparent" stroke="black"/>
+         fill="transparent" stroke="currentColor"/>
    <text x="80" y="75"
          text-anchor="middle"
          dominant-baseline="middle">
@@ -74,11 +74,11 @@ BASIC METHODS → NAIVE MIMICRY → FOCUS ON PROBLEM → FOCUS ON THEORY FIOS (f
    </text>
 
    <!-- 箭头连接线 -->
-   <path d="M 140,85 L 210,85" stroke="black" marker-end="url(#arrow)" fill="none"/>
+   <path d="M 140,85 L 210,85" stroke="currentColor" marker-end="url(#arrow)" fill="none"/>
 
    <rect x="210" y="40"
          width="120" height="90" rx="5"
-         fill="transparent" stroke="black"/>
+         fill="transparent" stroke="currentColor"/>
    <text x="270" y="75"
          text-anchor="middle"
          dominant-baseline="middle">
@@ -87,11 +87,11 @@ BASIC METHODS → NAIVE MIMICRY → FOCUS ON PROBLEM → FOCUS ON THEORY FIOS (f
    </text>
 
    <!-- 箭头连接线 -->
-   <path d="M 330,85 L 400,85" stroke="black" fill="none"/>
+   <path d="M 330,85 L 400,85" stroke="currentColor" fill="none"/>
 
    <rect x="400" y="40"
          width="180" height="90" rx="5"
-         fill="transparent" stroke="black"/>
+         fill="transparent" stroke="currentColor"/>
    <text x="490" y="65"
          text-anchor="middle"
          dominant-baseline="middle">
@@ -101,11 +101,11 @@ BASIC METHODS → NAIVE MIMICRY → FOCUS ON PROBLEM → FOCUS ON THEORY FIOS (f
    </text>
 
    <!-- 箭头连接线 -->
-   <path d="M 580,85 L 650,85" stroke="black" fill="none"/>
+   <path d="M 580,85 L 650,85" stroke="currentColor" fill="none"/>
 
    <rect x="650" y="40"
          width="120" height="90" rx="5"
-         fill="transparent" stroke="black"/>
+         fill="transparent" stroke="currentColor"/>
    <text x="710" y="85"
          text-anchor="middle"
          dominant-baseline="middle">
@@ -113,10 +113,10 @@ BASIC METHODS → NAIVE MIMICRY → FOCUS ON PROBLEM → FOCUS ON THEORY FIOS (f
    </text>
 
    <!-- 箭头连接线 -->
-   <path d="M 615,5 L 615,85" stroke="black" fill="none"/>
-   <path d="M 615,5 L 490,5" stroke="black" fill="none"/>
-   <path d="M 490,5 L 490,40" stroke="black" marker-end="url(#arrow)" fill="none"/>
-   <path d="M 490,165 L 490,130" stroke="black" marker-end="url(#arrow)" fill="none"/>
+   <path d="M 615,5 L 615,85" stroke="currentColor" fill="none"/>
+   <path d="M 615,5 L 490,5" stroke="currentColor" fill="none"/>
+   <path d="M 490,5 L 490,40" stroke="currentColor" marker-end="url(#arrow)" fill="none"/>
+   <path d="M 490,165 L 490,130" stroke="currentColor" marker-end="url(#arrow)" fill="none"/>
 
 </svg>
 

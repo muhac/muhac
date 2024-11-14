@@ -3,6 +3,9 @@ title: Python · Anaconda Tutorial
 date: 2020-01-16 00:01:48
 tags: [Python, Anaconda, Conda]
 categories: [Software Engineering, Python]
+lang: zh-CN
+group: snippet
+hidden: true
 ---
 
 这里只列出了部分基础操作命令。

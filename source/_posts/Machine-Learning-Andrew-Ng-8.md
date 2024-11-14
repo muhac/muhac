@@ -91,7 +91,7 @@ Reduce data from 2D to 1D
 
 ![PCA vs LR](Machine-Learning-Andrew-Ng-8/4.png)
 
-$\textsf{LR: } x \rightarrow y \qquad\qquad \textsf{PCA: } x_1 ,\, x_2 ,\,\dots,\, x_n$
+LR:  $x \rightarrow y$ &emsp;&emsp; PCA: $x_1 ,\, x_2 ,\,\dots,\, x_n$
 
 ##### PCA Algorithm
 

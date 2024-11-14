@@ -3,6 +3,8 @@ title: Git · Change Author Information
 date: 2019-11-21 13:18:00
 tags: [Git, GitHub]
 categories: [Software Engineering, Git]
+group: snippet
+hidden: true
 ---
 
 Before running this script, you'll need:
@@ -14,7 +16,7 @@ Before running this script, you'll need:
 
 ##### Create a fresh, bare clone of your repository
 
-```shell
+```bash
 git clone --bare https://hostname/user/repo.git
 cd repo.git
 ```
@@ -25,7 +27,7 @@ cd repo.git
 - `CORRECT_NAME`
 - `CORRECT_EMAIL`
 
-```
+```bash
 #!/bin/sh
 
 git filter-branch --env-filter '
@@ -51,6 +53,6 @@ fi
 
 ##### Push the corrected history to GitHub Enterprise:
 
-```shell
+```bash
 git push --force --tags origin 'refs/heads/*'
 ```

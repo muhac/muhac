@@ -24,10 +24,16 @@ Machine learning is the field of study that gives computers the ability to learn
   *Given the "right answer" for each of our examples*
   - **Regression:** Predict real-valued output
   - **Classification:** Predict discrete-valued output
+
+
 - **Unsupervised Learning**
   - **Clustering**
   - **Non-clustering** *(The Cocktail Party Algorithm)*
+
+
 - **Reinforcement Learning**
+
+
 - **Recommender Systems**
 
 ### Linear Regression
