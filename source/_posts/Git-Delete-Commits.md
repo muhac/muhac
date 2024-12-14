@@ -1,5 +1,5 @@
 ---
-title: Git · Delete Commits
+title: How to Delete Git Commits
 date: 2021-05-01 22:38:00
 tags: [Git, GitHub]
 categories: [Software Engineering, Git]

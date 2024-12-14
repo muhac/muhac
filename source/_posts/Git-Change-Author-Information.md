@@ -1,5 +1,5 @@
 ---
-title: Git · Change Author Information
+title: How to Modify Author Information in Git
 date: 2019-11-21 13:18:00
 tags: [Git, GitHub]
 categories: [Software Engineering, Git]

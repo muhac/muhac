@@ -4,8 +4,7 @@ const pagination = require('hexo-pagination');
 
 module.exports = function (locals) {
   const config = this.config;
-  const posts = locals.posts.sort(config.index_generator.order_by)
-    .filter(post => !post.hidden); // 过滤 hidden: true 的文章
+  const posts = locals.posts.filter(post => !post.hidden).sort(config.index_generator.order_by);
 
   posts.data.sort((a, b) => (b.sticky || 0) - (a.sticky || 0));
 

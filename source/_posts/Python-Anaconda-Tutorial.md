@@ -1,5 +1,5 @@
 ---
-title: Python · Anaconda Tutorial
+title: Getting Started with Anaconda in Python
 date: 2020-01-16 00:01:48
 tags: [Python, Anaconda, Conda]
 categories: [Software Engineering, Python]
