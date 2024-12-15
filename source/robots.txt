@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Disallow: /
 
-Sitemap: https://muhan.li/sitemap.xml
+Sitemap: https://PH_WEB_URL/sitemap.xml

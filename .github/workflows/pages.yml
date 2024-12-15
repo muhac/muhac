@@ -60,8 +60,31 @@ jobs:
           npm -v
           hexo -v
 
+      - name: Setup git
+        run: |
+          git config --global init.defaultBranch main
+          git config --global user.name "Muhan Li"
+          git config --global user.email "limuhan@msn.com"
+
+      - name: Setup git credentials
+        env:
+          PAT_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          GIT_URL="https://$PAT_TOKEN@github.com/muhac/blog.git"
+          git clone $GIT_URL .deploy_git
+          sed -i "s|PH_GIT_URL|${GIT_URL}|g" _config.yml
+
+      - name: Setup deploy URL
+        run: |
+          WEB_URL=$(cat source/CNAME)
+          sed -i "s|PH_WEB_URL|${WEB_URL}|g" _config.yml
+          sed -i "s|PH_WEB_URL|${WEB_URL}|g" source/robots.txt
+
       - name: Build static content
         run: hexo generate
+
+      - name: Publish to Pages
+        run: hexo deploy
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -71,9 +94,9 @@ jobs:
         with:
           path: './public'
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    # - name: Deploy to GitHub Pages
+    #   id: deployment
+    #   uses: actions/deploy-pages@v4
 
       - name: Debug node modules
         uses: actions/upload-artifact@v4

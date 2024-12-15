@@ -13,7 +13,7 @@ timezone: America/Toronto
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://muhan.li
+url: https://PH_WEB_URL
 root: /
 permalink: :group/:hash/
 permalink_defaults:
@@ -131,4 +131,6 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: PH_GIT_URL
+  branch: [main]
