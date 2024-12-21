@@ -30,7 +30,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: CNAME
+skip_render: [CNAME, README.md]
 
 sitemap:
   path:
