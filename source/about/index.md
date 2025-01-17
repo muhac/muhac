@@ -24,6 +24,6 @@ comments: false
 </div>
 
 <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/limuhan/hi?primary_color=212529" style="min-width:320px;height:1350px;"></div>
+<div class="calendly-inline-widget" data-url="https://meet.muhan.li?primary_color=212529&hide_gdpr_banner=1" data-resize="true" style="min-width:320px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
