@@ -1,5 +1,5 @@
 ---
-title: 'Flask Tutorial: Create a WeChat Official Account Backend'
+title: 'Create a WeChat Public Account Backend with Flask'
 date: 2018-10-14 03:06:00
 tags: [Home Lab, Cloud Server]
 categories: [Software Engineering, Home Lab]

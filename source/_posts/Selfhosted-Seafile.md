@@ -1,5 +1,5 @@
 ---
-title: Seafile Professional Edition Self-Hosting Guide
+title: Self-Hosted (1) · Seafile Professional Edition
 date: 2020-04-28 22:09:00
 tags: [Home Lab, Cloud Server]
 categories: [Software Engineering, Home Lab]
