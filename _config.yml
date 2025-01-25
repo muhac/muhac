@@ -134,3 +134,17 @@ deploy:
   type: git
   repo: PH_GIT_URL
   branch: [main]
+
+# hexo-math plugin
+math:
+  katex:
+    css: '/assets/css/hexo_math_katex.min.css'
+    options:
+      throwOnError: false
+  mathjax:
+    css: '/assets/css/hexo_math_style.css'
+    options:
+      conversion:
+        display: true
+      tex:
+      svg:
