@@ -14,16 +14,18 @@ comments: false
     }
 </style>
 
-<div id="info">
+<section id="info">
     <div style="cursor: default; font-size: 200%;">Muhan Li</div>
     <div style="cursor: default;">
     <a style="border: none;" href="https://mscac.utoronto.ca/">MScAC</a>
     @
     <a style="border: none;" href="https://www.utoronto.ca/">U of T</a>
     </div>
-</div>
+</section>
 
+<section id="meet" style="margin-bottom: 2%; margin-top: 88px;">
 <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://meet.muhan.li?primary_color=212529&hide_gdpr_banner=1" data-resize="true" style="min-width:320px;"></div>
+<div class="calendly-inline-widget" data-url="https://meet.muhan.li?source=blog&primary_color=212529&hide_gdpr_banner=1" style="min-width: 320px; min-height: 888px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
+</section>
