@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy blog files to repo
 
 on:
   # Runs on pushes targeting the default branch
@@ -89,14 +89,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Debug blog site
+        uses: actions/upload-artifact@v4
         with:
+          name: blog-site
           path: './public'
-
-    # - name: Deploy to GitHub Pages
-    #   id: deployment
-    #   uses: actions/deploy-pages@v4
 
       - name: Debug node modules
         uses: actions/upload-artifact@v4
