@@ -38,7 +38,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: wakatime
-          options: 'username=ai&langs_count=8&hide=other&custom_title=Last year, I coded...&layout=compact&hide_border=true&border_color=FFFFFF00&theme=transparent&title_color=4499DD&text_color=5588BB'
+          options: 'username=ii&langs_count=8&hide=other&custom_title=Last year, I coded...&layout=compact&hide_border=true&border_color=FFFFFF00&theme=transparent&title_color=4499DD&text_color=5588BB'
           path: profile/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
