@@ -18,6 +18,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check WakaTime profile visibility
+        run: |
+          status=$(curl -s -o /dev/null -w "%{http_code}" "https://wakatime.com/api/v1/users/ii/stats")
+          if [ "$status" != "200" ]; then
+            echo "WakaTime profile is not public (HTTP $status). Aborting to preserve previous build."
+            exit 1
+          fi
+          echo "WakaTime profile is public (HTTP $status)."
+
       - name: Generate stats card
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
