@@ -37,12 +37,12 @@ jobs:
         working-directory: blog
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           submodules: true # Checkout private submodules(themes or something else).
 
       - name: Setup npm
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '22'
 
@@ -94,16 +94,16 @@ jobs:
         run: hexo deploy
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Debug blog site
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: blog-site
           path: './blog/public'
 
       - name: Debug node modules
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: node-modules
           path: blog/node_modules

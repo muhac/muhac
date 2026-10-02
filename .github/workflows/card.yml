@@ -18,7 +18,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Check WakaTime profile visibility
         run: |
@@ -30,7 +30,7 @@ jobs:
           echo "WakaTime profile is public (HTTP $status)."
 
       - name: Generate stats card
-        uses: soulteary/github-readme-stats-action@v1.0.0
+        uses: soulteary/github-readme-stats-action@v1.2.2
         with:
           card: stats
           options: 'username=${{ github.repository_owner }}&show_icons=true&hide_border=true'
@@ -38,7 +38,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages card
-        uses: soulteary/github-readme-stats-action@v1.0.0
+        uses: soulteary/github-readme-stats-action@v1.2.2
         with:
           card: top-langs
           options: 'username=${{ github.repository_owner }}&layout=compact&langs_count=6&hide_border=true'
@@ -46,7 +46,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate wakatime card
-        uses: soulteary/github-readme-stats-action@v1.0.0
+        uses: soulteary/github-readme-stats-action@v1.2.2
         with:
           card: wakatime
           options: 'username=ii&langs_count=8&hide=other&custom_title=Last year, I coded...&layout=compact&hide_border=true&border_color=FFFFFF00&theme=transparent&title_color=4499DD&text_color=5588BB'
@@ -58,7 +58,7 @@ jobs:
 
       - name: Upload static files as artifact
         id: deployment
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: profile/
 
@@ -75,4 +75,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
