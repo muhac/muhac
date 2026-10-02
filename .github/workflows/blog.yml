@@ -2,9 +2,12 @@
 name: Deploy blog files to repo
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on pushes targeting the default branch that change the blog
   push:
     branches: ["main"]
+    paths:
+      - "blog/**"
+      - ".github/workflows/blog.yml"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,6 +31,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    # The Hexo site lives in blog/; every run step below works from there.
+    defaults:
+      run:
+        working-directory: blog
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -93,10 +100,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: blog-site
-          path: './public'
+          path: './blog/public'
 
       - name: Debug node modules
         uses: actions/upload-artifact@v4
         with:
           name: node-modules
-          path: node_modules
+          path: blog/node_modules
