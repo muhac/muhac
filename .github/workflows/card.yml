@@ -3,6 +3,8 @@ name: Update README cards
 on:
   push:
     branches: ["main"]
+    paths:
+      - ".github/workflows/card.yml"
   schedule:
     # Runs at 00:00 UTC every day
     - cron: "0 0 * * *"
