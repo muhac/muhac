@@ -1,0 +1,11 @@
+version: 2
+updates:
+  # Workflow actions only. The blog's npm dependencies are deliberately left out
+  # to keep the site stable; they still receive security updates.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
